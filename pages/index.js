@@ -207,7 +207,7 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* Lead form card */}
+              {/* Quick contact card */}
               <div className="hero-card animate-in delay-2" style={{
                 background: 'rgba(255,255,255,0.05)',
                 border: '1px solid rgba(201,168,76,0.28)',
@@ -216,10 +216,10 @@ export default function Home() {
                 boxShadow: '0 12px 40px rgba(0,0,0,0.35)',
               }}>
                 <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 17, fontWeight: 700, color: 'var(--white)', marginBottom: 4 }}>
-                  Start your free case review
+                  Quick Contact
                 </div>
                 <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)', marginBottom: 16 }}>
-                  Confidential · No obligation · Responds same day
+                  Prefer to talk first? Drop your number and Tim calls you.
                 </div>
 
                 {sent ? (
@@ -228,19 +228,19 @@ export default function Home() {
                     borderRadius: 4, padding: '24px 16px', textAlign: 'center',
                   }}>
                     <div style={{ fontSize: 28, color: 'var(--gold)', marginBottom: 8 }}>✓</div>
-                    <strong style={{ fontFamily: 'Playfair Display, serif', color: 'var(--white)' }}>Message received.</strong>
+                    <strong style={{ fontFamily: 'Playfair Display, serif', color: 'var(--white)' }}>Got it — Tim will call you.</strong>
                     <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', marginTop: 8 }}>
-                      Tim will be in touch within a few hours.
+                      Expect a call within a few hours.
                     </p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
-                    <input type="text"  name="name"    placeholder="Your Name"    required
+                    <input type="text" name="name" placeholder="Your Name" required
                       className="input-field-dark"
-                      value={form.name}    onChange={e => setForm({ ...form, name: e.target.value })} />
-                    <input type="tel"   name="phone"   placeholder="Phone Number" required
+                      value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
+                    <input type="tel" name="phone" placeholder="Phone Number" required
                       className="input-field-dark"
-                      value={form.phone}   onChange={e => setForm({ ...form, phone: e.target.value })} />
+                      value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} />
                     <select name="charge" required className="input-field-dark"
                       value={form.charge} onChange={e => setForm({ ...form, charge: e.target.value })}
                       style={{ color: form.charge ? 'var(--white)' : 'rgba(255,255,255,0.38)' }}>
@@ -249,19 +249,16 @@ export default function Home() {
                         <option key={o} value={o}>{o}</option>
                       ))}
                     </select>
-                    <textarea name="message" placeholder="Brief description (optional)" rows={3}
-                      className="input-field-dark" style={{ resize: 'vertical' }}
-                      value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} />
                     <button type="submit" disabled={submitting} className="cta-gold"
                       style={{ width: '100%', fontSize: 14, padding: '12px', textTransform: 'none' }}>
-                      {submitting ? 'Sending…' : 'Send My Case Details →'}
+                      {submitting ? 'Sending…' : 'Request a Callback →'}
                     </button>
                     <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', textAlign: 'center' }}>
                       100% confidential. No attorney-client relationship created.
                     </div>
-                    <div style={{ textAlign: 'center', marginTop: 8 }}>
+                    <div style={{ textAlign: 'center', marginTop: 6 }}>
                       <a href="tel:4804474837" style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)' }}>
-                        Prefer to call? <span style={{ color: 'var(--gold)', fontWeight: 600 }}>(480) 447-4837</span>
+                        Or call now: <span style={{ color: 'var(--gold)', fontWeight: 600 }}>(480) 447-4837</span>
                       </a>
                     </div>
                   </form>
@@ -317,6 +314,75 @@ export default function Home() {
                 <p style={{ fontSize: 14, lineHeight: 1.78, color: 'var(--text-body)' }}>{desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── WIZARD CTA ── */}
+      <section style={{ padding: '72px 24px', background: 'var(--navy)' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+          <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, alignItems: 'center' }}>
+
+            {/* Left: text */}
+            <div>
+              <span className="section-label">Free Case Evaluation</span>
+              <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--white)', marginTop: 8, marginBottom: 16, lineHeight: 1.2 }}>
+                Explain Your Case in 90 Seconds
+              </h2>
+              <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.65)', lineHeight: 1.8, marginBottom: 24 }}>
+                Not sure where to start? Answer a few questions about your charges — Tim will review your full situation before he ever picks up the phone. No forms. No guessing. Just tell us what happened.
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 32 }}>
+                {[
+                  'Takes 90 seconds — 7 quick questions',
+                  'Branches based on your charge type',
+                  'Tim sees your case details before calling',
+                ].map(pt => (
+                  <div key={pt} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+                    <span style={{ color: 'var(--gold)', fontWeight: 700, flexShrink: 0, marginTop: 1 }}>✓</span>
+                    <span style={{ fontSize: 14, color: 'rgba(255,255,255,0.75)' }}>{pt}</span>
+                  </div>
+                ))}
+              </div>
+              <Link href="/case-review" className="cta-gold" style={{ fontSize: 16, padding: '15px 36px', textTransform: 'none' }}>
+                Start Case Evaluation →
+              </Link>
+            </div>
+
+            {/* Right: static wizard preview card */}
+            <Link href="/case-review" style={{ display: 'block', textDecoration: 'none' }}>
+              <div style={{
+                background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(201,168,76,0.22)',
+                borderRadius: 8, padding: '28px 24px',
+                cursor: 'pointer', transition: 'border-color 0.2s',
+              }}
+              onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'}
+              onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.22)'}
+              >
+                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: 14, fontFamily: 'Source Sans 3, sans-serif' }}>
+                  Step 1 of 7 — Select your charge type
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 14 }}>
+                  {[
+                    { label: 'DUI', sub: 'Driving under the influence' },
+                    { label: 'Drug Offense', sub: 'Possession, trafficking, sale' },
+                    { label: 'Domestic Violence', sub: 'Assault in domestic relationship' },
+                    { label: 'Assault', sub: 'Violent crime or threatening' },
+                  ].map(({ label, sub }) => (
+                    <div key={label} style={{
+                      background: 'rgba(255,255,255,0.06)', border: '1.5px solid rgba(255,255,255,0.1)',
+                      borderRadius: 4, padding: '12px 12px',
+                      transition: 'border-color 0.15s',
+                    }}>
+                      <div style={{ fontFamily: 'Source Sans 3, sans-serif', fontWeight: 700, fontSize: 13, color: 'var(--white)', marginBottom: 3 }}>{label}</div>
+                      <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', lineHeight: 1.4 }}>{sub}</div>
+                    </div>
+                  ))}
+                </div>
+                <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)', marginBottom: 10 }}>+ 3 more charge types</div>
+                <div style={{ fontSize: 13, color: 'var(--gold)', fontStyle: 'italic' }}>Tap any option to begin →</div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>

@@ -3,8 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 const LINKS = [
-  ['Practice Areas', '/practice-areas'],
-  ['Case Review',    '/case-review'],
+  ['Practice Areas',  '/practice-areas'],
   ['About Tim Tobin', '/about'],
   ['Contact',         '/contact'],
 ];

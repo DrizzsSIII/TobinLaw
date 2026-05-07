@@ -232,24 +232,49 @@ export default function CaseReview() {
       <div style={{
         background: 'linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%)',
         padding: '52px 24px 48px',
-        borderBottom: '3px solid var(--gold)',
         position: 'relative', overflow: 'hidden',
       }}>
         <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', backgroundImage: 'radial-gradient(ellipse 50% 80% at 90% 50%, rgba(201,168,76,0.07) 0%, transparent 70%)' }} />
         <div style={{ maxWidth: 720, margin: '0 auto', position: 'relative', zIndex: 1 }}>
-          <span className="section-label">Free &amp; Confidential</span>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(26px, 5vw, 44px)', color: 'var(--white)', lineHeight: 1.15, marginBottom: 12 }}>
-            Start Your Free Case Review
+          <span className="section-label">Free Case Evaluation</span>
+          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(28px, 5vw, 48px)', color: 'var(--white)', lineHeight: 1.12, marginBottom: 14 }}>
+            Tell Us About Your Case
           </h1>
-          <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.6)', maxWidth: 520, lineHeight: 1.7 }}>
-            Answer 6 quick questions and Tim Tobin will personally review your situation — free, confidential, no obligation.
+          <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.65)', maxWidth: 540, lineHeight: 1.75 }}>
+            Answer 7 quick questions and Tim will know exactly what you're facing before he calls you — no back-and-forth, no repeating yourself.
           </p>
         </div>
       </div>
 
+      {/* 3-step explainer bar */}
+      <div style={{ background: 'var(--white)', borderBottom: '3px solid #c9a84c', padding: '28px 24px' }}>
+        <div style={{ maxWidth: 840, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 0 }}>
+          {[
+            { n: '1', heading: 'Answer 7 questions',   sub: 'Takes about 90 seconds. No account needed.' },
+            { n: '2', heading: 'Tim reviews your case', sub: 'He sees your full situation before picking up the phone.' },
+            { n: '3', heading: 'Get a real answer',     sub: 'A free, direct consultation — not a sales call.' },
+          ].map(({ n, heading, sub }, i) => (
+            <div key={n} style={{
+              textAlign: 'center', padding: '16px 24px',
+              borderRight: i < 2 ? '1px solid var(--gray-light)' : 'none',
+            }}>
+              <div style={{
+                width: 32, height: 32, borderRadius: '50%',
+                background: '#0a1628', color: '#c9a84c',
+                fontFamily: 'Source Sans 3, sans-serif', fontWeight: 700, fontSize: 15,
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                margin: '0 auto 12px',
+              }}>{n}</div>
+              <div style={{ fontFamily: 'Source Sans 3, sans-serif', fontWeight: 700, fontSize: 14, color: 'var(--navy)', marginBottom: 5 }}>{heading}</div>
+              <div style={{ fontSize: 12, color: 'var(--gray-mid)', lineHeight: 1.55 }}>{sub}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Wizard */}
-      <section style={{ padding: '56px 24px 80px', background: 'var(--navy-mid)', minHeight: '70vh' }}>
-        <div style={{ maxWidth: 720, margin: '0 auto' }}>
+      <section style={{ padding: '48px 24px 80px', background: 'var(--navy-mid)', minHeight: '60vh' }}>
+        <div style={{ maxWidth: 680, margin: '0 auto' }}>
 
           {submitted ? (
             /* Confirmation */
@@ -287,6 +312,18 @@ export default function CaseReview() {
             </div>
           ) : (
             <div>
+              {/* Urgency banner */}
+              <div style={{
+                background: 'rgba(201,168,76,0.12)',
+                border: '1px solid rgba(201,168,76,0.3)',
+                borderRadius: 4, padding: '8px 14px',
+                fontSize: 13, color: '#c9a84c',
+                marginBottom: 24,
+                fontFamily: 'Source Sans 3, sans-serif',
+              }}>
+                ⚡ Tim personally reviews every submission — average response time under 2 hours
+              </div>
+
               <ProgressBar step={step} />
 
               {/* Step 1 — Charge type */}

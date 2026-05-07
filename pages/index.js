@@ -29,19 +29,19 @@ const REVIEWS = [
 ];
 
 const PRACTICE_AREAS = [
-  { Icon: IconCar,                title: 'DUI Defense',             href: '/practice-areas#dui',              desc: "Simple, extreme, super extreme, and underage DUI. Former DUI prosecutor who knows every angle of the state's case." },
-  { Icon: IconBeaker,             title: 'Drug Crimes',              href: '/practice-areas#drug-crimes',      desc: 'Possession, trafficking, and sale of controlled substances. Felony drug defense from a former Maricopa County drug prosecutor.' },
-  { Icon: IconHome,               title: 'Domestic Violence',        href: '/practice-areas#domestic-violence',desc: 'Experienced defense in Chandler, Mesa, and Maricopa County courts. Diversion programs and charge dismissals pursued aggressively.' },
-  { Icon: IconScale,              title: 'Assault & Violent Crimes', href: '/practice-areas#assault',          desc: 'From misdemeanor assault to aggravated felony charges. Every case gets a customized defense strategy.' },
-  { Icon: IconLock,               title: 'Property & Theft',         href: '/practice-areas#theft',            desc: 'Shoplifting, burglary, and theft charges. Charges can often be reduced or dismissed with the right representation.' },
-  { Icon: IconExclamationTriangle,title: 'Traffic Violations',       href: '/practice-areas#traffic',          desc: 'Even a traffic charge can leave a permanent criminal record. We protect your record, license, and future.' },
+  { Icon: IconCar,                title: 'DUI Defense',             href: '/practice-areas#dui',              desc: "Simple, extreme, super extreme, and underage DUI. Former DUI prosecutor who knows every angle of the state's case.",             cta: 'DUI defense options →' },
+  { Icon: IconBeaker,             title: 'Drug Crimes',              href: '/practice-areas#drug-crimes',      desc: 'Possession, trafficking, and sale of controlled substances. Felony drug defense from a former Maricopa County drug prosecutor.',   cta: 'Drug charge defenses →' },
+  { Icon: IconHome,               title: 'Domestic Violence',        href: '/practice-areas#domestic-violence',desc: 'Experienced defense in Chandler, Mesa, and Maricopa County courts. Diversion programs and charge dismissals pursued aggressively.', cta: 'Domestic violence defenses →' },
+  { Icon: IconScale,              title: 'Assault & Violent Crimes', href: '/practice-areas#assault',          desc: 'From misdemeanor assault to aggravated felony charges. Every case gets a customized defense strategy.',                            cta: 'Assault defense options →' },
+  { Icon: IconLock,               title: 'Property & Theft',         href: '/practice-areas#theft',            desc: 'Shoplifting, burglary, and theft charges. Charges can often be reduced or dismissed with the right representation.',             cta: 'Property crime defenses →' },
+  { Icon: IconExclamationTriangle,title: 'Traffic Violations',       href: '/practice-areas#traffic',          desc: 'Even a traffic charge can leave a permanent criminal record. We protect your record, license, and future.',                     cta: 'Traffic defense options →' },
 ];
 
 const WHY_CARDS = [
-  { Icon: IconScale,          title: 'Former Prosecutor Advantage', desc: "Timothy Tobin prosecuted for two government agencies, including Maricopa County. He knows exactly how prosecutors build their cases — and precisely how to dismantle them." },
-  { Icon: IconChat,           title: 'Direct Access to Your Attorney', desc: "No secretaries. No paralegals. Every client has Tim's direct cell phone and email. When you have a question, Tim answers — not a legal assistant." },
-  { Icon: IconCurrencyDollar, title: 'Flat Rate — No Surprises', desc: "Affordable flat-rate representation with payment plans available. You know the full cost upfront. No hourly billing, no hidden fees, no matter how long your case takes." },
-  { Icon: IconClock,          title: 'Available 6am to 8pm', desc: "Arrests don't happen on a 9–5 schedule. Tobin Law Office is reachable with extended hours, seven days a week, and responds to after-hours messages." },
+  { Icon: IconScale,          title: 'Former Prosecutor Advantage', desc: "Timothy Tobin prosecuted for two government agencies, including Maricopa County. He knows how prosecutors build their cases and exactly where those cases are weakest." },
+  { Icon: IconChat,           title: 'Direct Access to Your Attorney', desc: "No secretaries. No paralegals. Every client has Tim's direct cell number and email. When you have a question, Tim answers it." },
+  { Icon: IconCurrencyDollar, title: 'Flat Rate, No Surprises', desc: "Flat-rate representation with payment plans available. You know the full cost before you sign anything. No hourly billing, no hidden fees." },
+  { Icon: IconClock,          title: 'Available 6am to 8pm', desc: "Arrests don't follow business hours. Tobin Law Office is reachable with extended hours every day and responds to after-hours messages." },
 ];
 
 const CASE_RESULTS = [
@@ -55,23 +55,23 @@ const CASE_RESULTS = [
 
 const FAQS = [
   {
-    q: 'What are the penalties for a first DUI in Arizona?',
+    q: 'I just got a DUI in Arizona. What happens next?',
     a: "Arizona has some of the harshest DUI laws in the nation. A first-offense DUI (BAC 0.08%+) carries a mandatory minimum of 10 consecutive days in jail (though 9 can be suspended with treatment), fines exceeding $1,500, a 90-day license suspension, and required ignition interlock installation. Extreme DUI (BAC 0.15%+) and Super Extreme (BAC 0.20%+) carry even harsher mandatory minimums. The good news: these charges can often be challenged and reduced with the right attorney.",
   },
   {
-    q: 'Can drug possession charges be reduced or dismissed in Arizona?',
-    a: "Yes — often. Arizona offers several pathways including Proposition 200 (which mandates probation over prison for first and second personal-use possessions), drug diversion programs, and TASC (Treatment Assessment Screening Center) programs that can result in full dismissal upon completion. An aggressive defense can also challenge the legality of the search and seizure that led to the arrest, which can result in evidence suppression and case dismissal.",
+    q: 'Can I avoid prison for drug possession in Arizona?',
+    a: "Yes, often. Arizona offers several pathways including Proposition 200 (which mandates probation over prison for first and second personal-use possessions), drug diversion programs, and TASC (Treatment Assessment Screening Center) programs that can result in full dismissal upon completion. An aggressive defense can also challenge the legality of the search and seizure that led to the arrest, which can result in evidence suppression and case dismissal.",
   },
   {
-    q: 'What happens immediately after a domestic violence arrest in Arizona?',
-    a: "Arizona law requires a mandatory arrest when police are called to a domestic disturbance and find probable cause — even if the alleged victim doesn't want to press charges. After arrest, you'll appear before a judge for an Initial Appearance within 24 hours. A protective order is typically issued, which can prohibit you from returning to your home. You should contact an attorney before making any statements to police, and before attempting contact with the alleged victim — violations of a protective order carry additional criminal penalties.",
+    q: 'My partner called the police and now I have a domestic violence charge. What do I do?',
+    a: "Arizona law requires a mandatory arrest when police are called to a domestic disturbance and find probable cause, even if the alleged victim doesn't want to press charges. After arrest, you'll appear before a judge for an Initial Appearance within 24 hours. A protective order is typically issued, which can prohibit you from returning to your home. You should contact an attorney before making any statements to police, and before attempting contact with the alleged victim. Violations of a protective order carry additional criminal penalties.",
   },
   {
-    q: 'Is criminal speeding a serious charge in Arizona?',
-    a: "Yes. Unlike a civil traffic ticket, criminal speeding in Arizona (A.R.S. § 28-701.02) is a Class 3 misdemeanor — a criminal charge that creates a permanent criminal record. It applies if you drive over 85 mph anywhere, over 35 mph in a school zone, or 20+ mph over the posted limit. A conviction carries up to 30 days in jail, fines, and 3 points on your license. Many people are surprised to learn a 'traffic ticket' is actually a criminal offense — and that it's worth fighting.",
+    q: 'Is a speeding ticket actually a criminal charge in Arizona?',
+    a: "Sometimes, yes. Criminal speeding in Arizona (A.R.S. § 28-701.02) is a Class 3 misdemeanor, a criminal charge that creates a permanent criminal record. It applies if you drive over 85 mph anywhere, over 35 mph in a school zone, or 20+ mph over the posted limit. A conviction carries up to 30 days in jail, fines, and 3 points on your license. Many people are surprised to learn their traffic ticket is actually a criminal offense, and that it's worth fighting.",
   },
   {
-    q: 'What is a criminal diversion program and do I qualify?',
+    q: 'Can I get my charges dropped by completing a program instead of going to court?',
     a: "Diversion programs allow eligible defendants to avoid a criminal conviction entirely by completing requirements such as counseling, community service, education classes, or treatment. Upon successful completion, charges are dismissed. In Arizona, diversion is available for many first-time offenses including certain drug charges, domestic violence, minor assault, and some theft cases. Eligibility depends on the charge, your criminal history, and the specific court. Attorney Tobin has extensive experience negotiating diversion agreements and knows which courts and prosecutors are most receptive.",
   },
 ];
@@ -169,19 +169,19 @@ export default function Home() {
             <div className="animate-in delay-1">
               <span className="section-label">Chandler &amp; Mesa, Arizona</span>
               <h1 style={{
-                fontFamily: 'Playfair Display, serif',
+                fontFamily: 'Cormorant Garamond, serif',
                 fontSize: 'clamp(28px, 3.2vw, 52px)',
-                fontWeight: 800, color: 'var(--white)',
+                fontWeight: 700, color: 'var(--white)',
                 lineHeight: 1.1, marginBottom: 20, letterSpacing: '-0.02em',
               }}>
-                Your Charges Are Serious.{' '}
-                <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>So Is Tim Tobin.</em>
+                You needed a lawyer yesterday.{' '}
+                <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>Here's where to start.</em>
               </h1>
 
               <div style={{ width: 52, height: 2, background: 'var(--gold)', marginBottom: 20 }} />
 
               <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.78)', lineHeight: 1.78, marginBottom: 28 }}>
-                A former Arizona prosecutor who spent years building cases like yours — now he uses that knowledge to tear them apart. Flat rates. Direct access. Real results across Maricopa County.
+                A former Arizona prosecutor who spent years building cases like yours. Now he uses that knowledge to tear them apart. Flat rates. Direct access. Real results across Maricopa County.
               </p>
 
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 36 }}>
@@ -193,16 +193,21 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap', marginBottom: 36 }}>
+              <div style={{ display: 'flex', gap: 0, flexWrap: 'wrap', marginBottom: 36, alignItems: 'center' }}>
                 {[
-                  ['★ 5.0', '128 Google Reviews'],
-                  ['$0',    'Free Consultation'],
-                  ['Flat',  'No Hidden Fees'],
-                  ['6am–8pm','Extended Hours'],
-                ].map(([val, lbl]) => (
-                  <div key={lbl}>
-                    <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, fontWeight: 700, color: 'var(--gold)' }}>{val}</div>
-                    <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', marginTop: 2 }}>{lbl}</div>
+                  ['★ 5.0', '128 Google Reviews', true],
+                  ['$0',    'Free Consultation', false],
+                  ['Flat',  'No Hidden Fees', false],
+                  ['6am–8pm','Extended Hours', false],
+                ].map(([val, lbl, large], idx, arr) => (
+                  <div key={lbl} style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ paddingRight: 20, paddingLeft: idx > 0 ? 20 : 0 }}>
+                      <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: large ? 28 : 20, fontWeight: 700, color: 'var(--gold)' }}>{val}</div>
+                      <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', marginTop: 2 }}>{lbl}</div>
+                    </div>
+                    {idx < arr.length - 1 && (
+                      <div style={{ width: 1, height: 32, background: 'rgba(255,255,255,0.12)', flexShrink: 0 }} />
+                    )}
                   </div>
                 ))}
               </div>
@@ -215,7 +220,7 @@ export default function Home() {
                 backdropFilter: 'blur(12px)',
                 boxShadow: '0 12px 40px rgba(0,0,0,0.35)',
               }}>
-                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 17, fontWeight: 700, color: 'var(--white)', marginBottom: 4 }}>
+                <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 17, fontWeight: 700, color: 'var(--white)', marginBottom: 4 }}>
                   Quick Contact
                 </div>
                 <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)', marginBottom: 16 }}>
@@ -228,7 +233,7 @@ export default function Home() {
                     borderRadius: 4, padding: '24px 16px', textAlign: 'center',
                   }}>
                     <div style={{ fontSize: 28, color: 'var(--gold)', marginBottom: 8 }}>✓</div>
-                    <strong style={{ fontFamily: 'Playfair Display, serif', color: 'var(--white)' }}>Got it — Tim will call you.</strong>
+                    <strong style={{ fontFamily: 'Cormorant Garamond, serif', color: 'var(--white)' }}>Got it. Tim will call you.</strong>
                     <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', marginTop: 8 }}>
                       Expect a call within a few hours.
                     </p>
@@ -282,7 +287,7 @@ export default function Home() {
               padding: '10px 28px', textAlign: 'center',
               borderRight: i < arr.length - 1 ? '1px solid var(--gray-light)' : 'none',
             }}>
-              <div style={{ fontFamily: 'Source Sans 3, sans-serif', fontSize: 13, fontWeight: 700, color: 'var(--navy)' }}>{label}</div>
+              <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 13, fontWeight: 700, color: 'var(--navy)' }}>{label}</div>
               <div style={{ fontSize: 12, color: 'var(--gold)', fontWeight: 600 }}>{sub}</div>
             </div>
           ))}
@@ -293,14 +298,12 @@ export default function Home() {
       <section id="why-us" style={{ padding: '84px 24px', background: 'var(--white)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 56 }}>
-            <span className="section-label">Why Clients Choose Tim Tobin</span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(26px, 4vw, 40px)', marginTop: 8, color: 'var(--navy)' }}>
-              A Former Prosecutor Fighting For You
+            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(26px, 4vw, 40px)', color: 'var(--navy)' }}>
+              Why his background changes what's possible in your case
             </h2>
-            <div className="divider-gold" style={{ margin: '18px auto 0' }} />
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr 1fr 0.9fr', gap: 24 }} className="why-grid">
             {WHY_CARDS.map(({ Icon, title, desc }) => (
               <div key={title} className="card-hover" style={{
                 background: 'var(--white)', border: '1px solid var(--gray-light)',
@@ -310,7 +313,7 @@ export default function Home() {
                 <div style={{ color: 'var(--navy)', marginBottom: 14 }}>
                   <Icon width={28} height={28} />
                 </div>
-                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, color: 'var(--navy)', marginBottom: 10 }}>{title}</h3>
+                <h3 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 18, color: 'var(--navy)', marginBottom: 10 }}>{title}</h3>
                 <p style={{ fontSize: 14, lineHeight: 1.78, color: 'var(--text-body)' }}>{desc}</p>
               </div>
             ))}
@@ -326,15 +329,15 @@ export default function Home() {
             {/* Left: text */}
             <div>
               <span className="section-label">Free Case Evaluation</span>
-              <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--white)', marginTop: 8, marginBottom: 16, lineHeight: 1.2 }}>
+              <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--white)', marginTop: 8, marginBottom: 16, lineHeight: 1.2 }}>
                 Explain Your Case in 90 Seconds
               </h2>
               <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.65)', lineHeight: 1.8, marginBottom: 24 }}>
-                Not sure where to start? Answer a few questions about your charges — Tim will review your full situation before he ever picks up the phone. No forms. No guessing. Just tell us what happened.
+                Not sure where to start? Answer a few questions about your charges. Tim will review your full situation before he ever picks up the phone. No forms. No guessing. Just tell us what happened.
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 32 }}>
                 {[
-                  'Takes 90 seconds — 7 quick questions',
+                  'Takes 90 seconds, 7 quick questions',
                   'Branches based on your charge type',
                   'Tim sees your case details before calling',
                 ].map(pt => (
@@ -359,8 +362,8 @@ export default function Home() {
               onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'}
               onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.22)'}
               >
-                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: 14, fontFamily: 'Source Sans 3, sans-serif' }}>
-                  Step 1 of 7 — Select your charge type
+                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: 14, fontFamily: 'DM Sans, sans-serif' }}>
+                  Step 1 of 7: Select your charge type
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 14 }}>
                   {[
@@ -374,7 +377,7 @@ export default function Home() {
                       borderRadius: 4, padding: '12px 12px',
                       transition: 'border-color 0.15s',
                     }}>
-                      <div style={{ fontFamily: 'Source Sans 3, sans-serif', fontWeight: 700, fontSize: 13, color: 'var(--white)', marginBottom: 3 }}>{label}</div>
+                      <div style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: 13, color: 'var(--white)', marginBottom: 3 }}>{label}</div>
                       <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', lineHeight: 1.4 }}>{sub}</div>
                     </div>
                   ))}
@@ -393,12 +396,12 @@ export default function Home() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 40, flexWrap: 'wrap', gap: 16 }}>
             <div>
               <span className="section-label">What We Defend</span>
-              <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', marginTop: 8, color: 'var(--navy)' }}>
+              <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', marginTop: 8, color: 'var(--navy)' }}>
                 Practice Areas
               </h2>
             </div>
             <Link href="/practice-areas" style={{
-              fontFamily: 'Source Sans 3, sans-serif', fontSize: 14, fontWeight: 600,
+              fontFamily: 'DM Sans, sans-serif', fontSize: 14, fontWeight: 600,
               color: 'var(--gold)', borderBottom: '1px solid var(--gold)', paddingBottom: 2,
               transition: 'opacity 0.15s',
             }}
@@ -408,7 +411,7 @@ export default function Home() {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 16 }}>
-            {PRACTICE_AREAS.map(({ Icon, title, desc, href }) => (
+            {PRACTICE_AREAS.map(({ Icon, title, desc, href, cta }) => (
               <Link href={href} key={title} className="card-hover" style={{
                 display: 'block', background: 'var(--navy)',
                 padding: '26px 24px', borderRadius: 4,
@@ -417,10 +420,10 @@ export default function Home() {
                 <div style={{ color: 'var(--gold)', marginBottom: 10 }}>
                   <Icon width={28} height={28} />
                 </div>
-                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, color: 'var(--white)', marginBottom: 8 }}>{title}</h3>
+                <h3 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 18, color: 'var(--white)', marginBottom: 8 }}>{title}</h3>
                 <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.62)', lineHeight: 1.68, marginBottom: 14 }}>{desc}</p>
-                <span style={{ fontSize: 11, color: 'var(--gold)', fontWeight: 700, fontFamily: 'Source Sans 3, sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-                  Learn More →
+                <span style={{ fontSize: 12, color: 'var(--gold)', fontWeight: 600, fontFamily: 'DM Sans, sans-serif' }}>
+                  {cta}
                 </span>
               </Link>
             ))}
@@ -433,7 +436,7 @@ export default function Home() {
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 52 }}>
             <span className="section-label">Client Reviews</span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--white)', marginTop: 8 }}>
+            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--white)', marginTop: 8 }}>
               ★ 5.0 on Google · 128 Reviews
             </h2>
             <div className="divider-gold" style={{ margin: '18px auto 0' }} />
@@ -448,12 +451,12 @@ export default function Home() {
               }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
                   <Stars n={stars} />
-                  <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', fontFamily: 'Source Sans 3, sans-serif' }}>{date}</span>
+                  <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', fontFamily: 'DM Sans, sans-serif' }}>{date}</span>
                 </div>
                 <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, fontStyle: 'italic', marginBottom: 16 }}>
                   "{text}"
                 </p>
-                <div style={{ fontFamily: 'Source Sans 3, sans-serif', fontWeight: 600, fontSize: 13, color: 'var(--gold)' }}>
+                <div style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 600, fontSize: 13, color: 'var(--gold)' }}>
                   — {name}, {location}
                 </div>
               </div>
@@ -474,8 +477,8 @@ export default function Home() {
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 52 }}>
             <span className="section-label">Case Outcomes</span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--white)', marginTop: 8 }}>
-              Results That Speak for Themselves
+            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--white)', marginTop: 8 }}>
+              What happened when clients called Tim
             </h2>
             <div className="divider-gold" style={{ margin: '18px auto 0' }} />
           </div>
@@ -492,7 +495,7 @@ export default function Home() {
                 <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.38)', marginBottom: 8 }}>
                   {charge}
                 </div>
-                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, fontWeight: 700, color: 'var(--gold)', marginBottom: 10, lineHeight: 1.25 }}>
+                <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 18, fontWeight: 700, color: 'var(--gold)', marginBottom: 10, lineHeight: 1.25 }}>
                   {outcome}
                 </div>
                 <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)', lineHeight: 1.68 }}>{detail}</p>
@@ -511,16 +514,14 @@ export default function Home() {
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
             <div>
-              <span className="section-label">About Tim Tobin</span>
-              <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--navy)', marginTop: 8, marginBottom: 10 }}>
-                He Prosecuted Cases Like Yours. Now He Defends Them.
+              <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--navy)', marginBottom: 20 }}>
+                He spent years on the other side of the courtroom.
               </h2>
-              <div className="divider-gold" style={{ marginBottom: 26 }} />
               <p style={{ fontSize: 15, lineHeight: 1.85, color: 'var(--text-body)', marginBottom: 16 }}>
-                Timothy Tobin is a former prosecutor for two Arizona government agencies, including Maricopa County. He knows how police build cases, how prosecutors think, and how courts work — because he spent years on the other side of the aisle.
+                Timothy Tobin is a former prosecutor for two Arizona government agencies, including Maricopa County. He knows how police build cases, how prosecutors think, and how courts work. He spent years on the other side of the aisle.
               </p>
               <p style={{ fontSize: 15, lineHeight: 1.85, color: 'var(--text-body)', marginBottom: 32 }}>
-                Today, Tim personally handles every aspect of every case — with direct communication, aggressive representation, and flat-rate fees that make quality legal defense accessible across the Valley.
+                Today, Tim personally handles every aspect of every case: direct communication, aggressive representation, and flat-rate fees that make quality legal defense accessible across the Valley.
               </p>
               <Link href="/about" className="cta-navy" style={{ textTransform: 'none', fontSize: 15 }}>
                 Read Tim's Story →
@@ -547,7 +548,7 @@ export default function Home() {
                 }}>
                   <span style={{ color: 'var(--gold)', fontSize: 18, marginTop: 1, flexShrink: 0 }}>✓</span>
                   <div>
-                    <div style={{ fontFamily: 'Source Sans 3, sans-serif', fontWeight: 600, color: 'var(--white)', fontSize: 15 }}>{val}</div>
+                    <div style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 600, color: 'var(--white)', fontSize: 15 }}>{val}</div>
                     <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', marginTop: 2 }}>{lbl}</div>
                   </div>
                 </div>
@@ -561,11 +562,9 @@ export default function Home() {
       <section style={{ padding: '84px 24px', background: 'var(--off-white)' }}>
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 48 }}>
-            <span className="section-label">Common Questions</span>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--navy)', marginTop: 8 }}>
-              Frequently Asked Questions
+            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--navy)' }}>
+              Questions people search at midnight
             </h2>
-            <div className="divider-gold" style={{ margin: '18px auto 0' }} />
           </div>
 
           <div style={{ background: 'var(--white)', borderRadius: 6, border: '1px solid var(--gray-light)', overflow: 'hidden', boxShadow: 'var(--shadow-sm)' }}>

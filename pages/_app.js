@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
       <Component {...pageProps} />
       <div className="mobile-cta-bar">
         <span>📞</span>
-        <a href="tel:4804474837">Call Now — Free Consultation · (480) 447-4837</a>
+        <a href="tel:4804474837">Free Consultation · (480) 447-4837</a>
       </div>
     </>
   );

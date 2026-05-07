@@ -58,11 +58,11 @@ export default function Contact() {
         }} />
         <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
           <span className="section-label">Free &amp; Confidential</span>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(28px, 5vw, 48px)', color: 'var(--white)', lineHeight: 1.15 }}>
+          <h1 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(28px, 5vw, 48px)', color: 'var(--white)', lineHeight: 1.15 }}>
             Contact Tobin Law Office
           </h1>
           <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.65)', marginTop: 14, maxWidth: 500 }}>
-            Facing criminal charges? Talk to Tim Tobin directly — not a paralegal, not an associate. A free, confidential consultation with the attorney himself.
+            Facing criminal charges? Talk to Tim Tobin directly. Not a paralegal, not an associate. A free, confidential consultation with the attorney himself.
           </p>
         </div>
       </div>
@@ -72,7 +72,7 @@ export default function Contact() {
 
           {/* ── Form ── */}
           <div>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 26, color: 'var(--navy)', marginBottom: 8 }}>
+            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 26, color: 'var(--navy)', marginBottom: 8 }}>
               Tell Us About Your Case
             </h2>
             <p style={{ fontSize: 14, color: 'var(--gray-mid)', marginBottom: 28, lineHeight: 1.65 }}>
@@ -85,7 +85,7 @@ export default function Contact() {
                 borderRadius: 5, padding: '48px 32px', textAlign: 'center',
               }}>
                 <div style={{ fontSize: 44, marginBottom: 16 }}>✓</div>
-                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 24, color: 'var(--navy)', marginBottom: 12 }}>
+                <h3 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 24, color: 'var(--navy)', marginBottom: 12 }}>
                   Message Received
                 </h3>
                 <p style={{ fontSize: 15, color: 'var(--text-body)', lineHeight: 1.7, marginBottom: 20 }}>
@@ -155,7 +155,7 @@ export default function Contact() {
 
                 <button type="submit" disabled={submitting} className="cta-gold"
                   style={{ fontSize: 16, padding: '15px', textTransform: 'none', marginTop: 4 }}>
-                  {submitting ? 'Sending…' : 'Send My Case Details — Free & Confidential'}
+                  {submitting ? 'Sending…' : 'Send Case Details, Free & Confidential'}
                 </button>
 
                 <p style={{ fontSize: 12, color: 'var(--gray-mid)', textAlign: 'center', lineHeight: 1.55 }}>
@@ -170,7 +170,7 @@ export default function Contact() {
 
             {/* Contact info */}
             <div style={{ background: 'var(--navy)', borderRadius: 5, padding: '28px 24px', border: '1px solid rgba(201,168,76,0.2)', boxShadow: 'var(--shadow-md)' }}>
-              <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, color: 'var(--white)', marginBottom: 22 }}>
+              <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 18, color: 'var(--white)', marginBottom: 22 }}>
                 Contact Information
               </div>
 
@@ -181,7 +181,7 @@ export default function Contact() {
               ].map(({ icon, label, val, href }) => (
                 <div key={label} style={{ marginBottom: 18, paddingBottom: 18, borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
                   <div style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.32)', marginBottom: 4 }}>{icon} {label}</div>
-                  <a href={href} style={{ fontSize: 16, fontWeight: 600, color: 'var(--gold)', fontFamily: 'Source Sans 3, sans-serif' }}>{val}</a>
+                  <a href={href} style={{ fontSize: 16, fontWeight: 600, color: 'var(--gold)', fontFamily: 'DM Sans, sans-serif' }}>{val}</a>
                 </div>
               ))}
 
@@ -206,14 +206,14 @@ export default function Contact() {
 
             {/* Why call now */}
             <div style={{ background: 'var(--off-white)', borderRadius: 5, padding: '24px', border: '1px solid var(--gray-light)' }}>
-              <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 16, color: 'var(--navy)', marginBottom: 14 }}>
+              <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 16, color: 'var(--navy)', marginBottom: 14 }}>
                 Why Call Now?
               </div>
               {[
                 'Evidence disappears quickly after an arrest',
                 'Prosecutors begin building their case from day one',
                 'Early intervention can significantly change the outcome',
-                "Tim's number is direct — no voicemail, no assistant",
+                "Tim's number is direct. No voicemail, no assistant.",
               ].map(p => (
                 <div key={p} style={{ display: 'flex', gap: 10, marginBottom: 11 }}>
                   <span style={{ color: 'var(--gold)', fontWeight: 700, flexShrink: 0 }}>→</span>
@@ -245,7 +245,7 @@ export default function Contact() {
 }
 
 const labelStyle = {
-  fontFamily: 'Source Sans 3, sans-serif',
+  fontFamily: 'DM Sans, sans-serif',
   fontSize: 11, fontWeight: 700,
   letterSpacing: '0.08em', textTransform: 'uppercase',
   color: 'var(--navy)', display: 'block', marginBottom: 6,

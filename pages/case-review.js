@@ -55,10 +55,10 @@ function ProgressBar({ step }) {
   return (
     <div style={{ marginBottom: 32 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
-        <span style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.5)', fontFamily: 'Source Sans 3, sans-serif', letterSpacing: '0.06em' }}>
+        <span style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.5)', fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.06em' }}>
           STEP {step} OF {TOTAL_STEPS}
         </span>
-        <span style={{ fontSize: 12, color: 'var(--gold)', fontFamily: 'Source Sans 3, sans-serif', fontWeight: 600 }}>
+        <span style={{ fontSize: 12, color: 'var(--gold)', fontFamily: 'DM Sans, sans-serif', fontWeight: 600 }}>
           {Math.round((step / TOTAL_STEPS) * 100)}% complete
         </span>
       </div>
@@ -78,7 +78,7 @@ function ProgressBar({ step }) {
 function StepHeading({ title, sub }) {
   return (
     <div style={{ marginBottom: 28 }}>
-      <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(20px, 3vw, 28px)', color: 'var(--white)', marginBottom: 8, lineHeight: 1.2 }}>{title}</h2>
+      <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(20px, 3vw, 28px)', color: 'var(--white)', marginBottom: 8, lineHeight: 1.2 }}>{title}</h2>
       {sub && <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6 }}>{sub}</p>}
     </div>
   );
@@ -90,7 +90,7 @@ function NavButtons({ onBack, onNext, canNext, nextLabel = 'Continue →', step 
       {step > 1 && (
         <button onClick={onBack} style={{
           background: 'transparent', border: '1.5px solid rgba(255,255,255,0.2)',
-          color: 'rgba(255,255,255,0.6)', fontFamily: 'Source Sans 3, sans-serif',
+          color: 'rgba(255,255,255,0.6)', fontFamily: 'DM Sans, sans-serif',
           fontWeight: 600, fontSize: 14, padding: '12px 24px', borderRadius: 2,
           cursor: 'pointer', transition: 'border-color 0.15s, color 0.15s',
         }}
@@ -101,7 +101,7 @@ function NavButtons({ onBack, onNext, canNext, nextLabel = 'Continue →', step 
       <button onClick={onNext} disabled={!canNext} style={{
         background: canNext ? 'var(--gold)' : 'rgba(201,168,76,0.25)',
         color: canNext ? 'var(--navy)' : 'rgba(255,255,255,0.3)',
-        fontFamily: 'Source Sans 3, sans-serif', fontWeight: 700,
+        fontFamily: 'DM Sans, sans-serif', fontWeight: 700,
         fontSize: 15, padding: '13px 32px', borderRadius: 2,
         border: 'none', cursor: canNext ? 'pointer' : 'not-allowed',
         transition: 'background 0.18s, transform 0.15s',
@@ -136,7 +136,7 @@ function SelectionCard({ label, sub, selected, onClick, color, Icon }) {
       {color && (
         <div style={{ width: 8, height: 8, borderRadius: '50%', background: color, marginBottom: 10 }} />
       )}
-      <div style={{ fontFamily: 'Source Sans 3, sans-serif', fontWeight: 700, fontSize: 15, color: selected ? 'var(--gold)' : 'var(--white)', marginBottom: 4 }}>{label}</div>
+      <div style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: 15, color: selected ? 'var(--gold)' : 'var(--white)', marginBottom: 4 }}>{label}</div>
       {sub && <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', lineHeight: 1.5 }}>{sub}</div>}
     </button>
   );
@@ -149,7 +149,7 @@ function Pill({ label, selected, onClick }) {
       background: selected ? 'var(--gold)' : 'rgba(255,255,255,0.06)',
       border: `1.5px solid ${selected ? 'var(--gold)' : 'rgba(255,255,255,0.15)'}`,
       borderRadius: 20, cursor: 'pointer',
-      fontFamily: 'Source Sans 3, sans-serif', fontWeight: 600, fontSize: 13,
+      fontFamily: 'DM Sans, sans-serif', fontWeight: 600, fontSize: 13,
       color: selected ? 'var(--navy)' : 'rgba(255,255,255,0.8)',
       transition: 'all 0.15s',
       whiteSpace: 'nowrap',
@@ -237,11 +237,11 @@ export default function CaseReview() {
         <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', backgroundImage: 'radial-gradient(ellipse 50% 80% at 90% 50%, rgba(201,168,76,0.07) 0%, transparent 70%)' }} />
         <div style={{ maxWidth: 720, margin: '0 auto', position: 'relative', zIndex: 1 }}>
           <span className="section-label">Free Case Evaluation</span>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(28px, 5vw, 48px)', color: 'var(--white)', lineHeight: 1.12, marginBottom: 14 }}>
+          <h1 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(28px, 5vw, 48px)', color: 'var(--white)', lineHeight: 1.12, marginBottom: 14 }}>
             Tell Us About Your Case
           </h1>
           <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.65)', maxWidth: 540, lineHeight: 1.75 }}>
-            Answer 7 quick questions and Tim will know exactly what you're facing before he calls you — no back-and-forth, no repeating yourself.
+            Answer 7 quick questions and Tim will know exactly what you're facing before he calls you. No back-and-forth, no repeating yourself.
           </p>
         </div>
       </div>
@@ -252,7 +252,7 @@ export default function CaseReview() {
           {[
             { n: '1', heading: 'Answer 7 questions',   sub: 'Takes about 90 seconds. No account needed.' },
             { n: '2', heading: 'Tim reviews your case', sub: 'He sees your full situation before picking up the phone.' },
-            { n: '3', heading: 'Get a real answer',     sub: 'A free, direct consultation — not a sales call.' },
+            { n: '3', heading: 'Get a real answer',     sub: 'A free, direct consultation. Not a sales call.' },
           ].map(({ n, heading, sub }, i) => (
             <div key={n} style={{
               textAlign: 'center', padding: '16px 24px',
@@ -261,11 +261,11 @@ export default function CaseReview() {
               <div style={{
                 width: 32, height: 32, borderRadius: '50%',
                 background: '#0a1628', color: '#c9a84c',
-                fontFamily: 'Source Sans 3, sans-serif', fontWeight: 700, fontSize: 15,
+                fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: 15,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 margin: '0 auto 12px',
               }}>{n}</div>
-              <div style={{ fontFamily: 'Source Sans 3, sans-serif', fontWeight: 700, fontSize: 14, color: 'var(--navy)', marginBottom: 5 }}>{heading}</div>
+              <div style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: 14, color: 'var(--navy)', marginBottom: 5 }}>{heading}</div>
               <div style={{ fontSize: 12, color: 'var(--gray-mid)', lineHeight: 1.55 }}>{sub}</div>
             </div>
           ))}
@@ -287,13 +287,13 @@ export default function CaseReview() {
                 }}>
                   <span style={{ color: '#ef4444', fontSize: 18, flexShrink: 0 }}>⚠</span>
                   <div>
-                    <div style={{ fontFamily: 'Source Sans 3, sans-serif', fontWeight: 700, color: '#fca5a5', fontSize: 14 }}>Recently arrested — Tim will prioritize this response</div>
+                    <div style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#fca5a5', fontSize: 14 }}>Recently arrested — Tim will prioritize this response</div>
                     <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', marginTop: 3 }}>Expected response: within the hour</div>
                   </div>
                 </div>
               )}
               <div style={{ fontSize: 52, color: 'var(--gold)', marginBottom: 20 }}>✓</div>
-              <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 28, color: 'var(--white)', marginBottom: 14 }}>
+              <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 28, color: 'var(--white)', marginBottom: 14 }}>
                 Case Review Received
               </h2>
               <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.65)', lineHeight: 1.75, maxWidth: 420, margin: '0 auto 32px' }}>
@@ -319,9 +319,9 @@ export default function CaseReview() {
                 borderRadius: 4, padding: '8px 14px',
                 fontSize: 13, color: '#c9a84c',
                 marginBottom: 24,
-                fontFamily: 'Source Sans 3, sans-serif',
+                fontFamily: 'DM Sans, sans-serif',
               }}>
-                ⚡ Tim personally reviews every submission — average response time under 2 hours
+                ⚡ Tim personally reviews every submission. Average response time under 2 hours.
               </div>
 
               <ProgressBar step={step} />
@@ -359,7 +359,7 @@ export default function CaseReview() {
               {/* Step 3 — Severity */}
               {step === 3 && (
                 <div>
-                  <StepHeading title="What is the severity of the charge?" sub="If you're not sure, select 'Not sure yet' — Tim can help clarify." />
+                  <StepHeading title="What is the severity of the charge?" sub="Not sure? Select 'Not sure yet' and Tim can help clarify." />
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))', gap: 12 }}>
                     {SEVERITY.map(({ id, label, sub, color }) => (
                       <SelectionCard key={id} label={label} sub={sub} color={color}
@@ -450,7 +450,7 @@ export default function CaseReview() {
                     }}>
                       <span style={{ color: '#ef4444', fontSize: 18, flexShrink: 0 }}>⚠</span>
                       <div>
-                        <div style={{ fontFamily: 'Source Sans 3, sans-serif', fontWeight: 700, color: '#fca5a5', fontSize: 14 }}>Recently arrested — Tim will prioritize this response</div>
+                        <div style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#fca5a5', fontSize: 14 }}>Recently arrested — Tim will prioritize this response</div>
                         <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', marginTop: 3 }}>Expected response time: within the hour</div>
                       </div>
                     </div>
@@ -472,7 +472,7 @@ export default function CaseReview() {
                       ['Notes',           contact.notes || '—'],
                     ].map(([k, v]) => (
                       <div key={k} style={{ display: 'flex', gap: 16, padding: '10px 0', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-                        <span style={{ fontSize: 12, fontWeight: 700, color: 'rgba(255,255,255,0.38)', textTransform: 'uppercase', letterSpacing: '0.08em', minWidth: 120, flexShrink: 0, fontFamily: 'Source Sans 3, sans-serif', paddingTop: 1 }}>{k}</span>
+                        <span style={{ fontSize: 12, fontWeight: 700, color: 'rgba(255,255,255,0.38)', textTransform: 'uppercase', letterSpacing: '0.08em', minWidth: 120, flexShrink: 0, fontFamily: 'DM Sans, sans-serif', paddingTop: 1 }}>{k}</span>
                         <span style={{ fontSize: 14, color: 'rgba(255,255,255,0.85)', lineHeight: 1.5 }}>{v}</span>
                       </div>
                     ))}
@@ -481,13 +481,13 @@ export default function CaseReview() {
                   <div style={{ display: 'flex', gap: 12, marginTop: 24, alignItems: 'center' }}>
                     <button onClick={back} style={{
                       background: 'transparent', border: '1.5px solid rgba(255,255,255,0.2)',
-                      color: 'rgba(255,255,255,0.6)', fontFamily: 'Source Sans 3, sans-serif',
+                      color: 'rgba(255,255,255,0.6)', fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 600, fontSize: 14, padding: '12px 24px', borderRadius: 2,
                       cursor: 'pointer',
                     }}>← Back</button>
                     <button onClick={handleSubmit} disabled={submitting} style={{
                       flex: 1, background: 'var(--gold)', color: 'var(--navy)',
-                      fontFamily: 'Source Sans 3, sans-serif', fontWeight: 700,
+                      fontFamily: 'DM Sans, sans-serif', fontWeight: 700,
                       fontSize: 16, padding: '14px 32px', borderRadius: 2,
                       border: 'none', cursor: 'pointer',
                       transition: 'background 0.18s, transform 0.15s',
@@ -512,7 +512,7 @@ export default function CaseReview() {
 }
 
 const labelStyle = {
-  fontFamily: 'Source Sans 3, sans-serif',
+  fontFamily: 'DM Sans, sans-serif',
   fontSize: 11, fontWeight: 700,
   letterSpacing: '0.08em', textTransform: 'uppercase',
   color: 'rgba(255,255,255,0.5)', display: 'block', marginBottom: 6,

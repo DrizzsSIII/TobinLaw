@@ -23,8 +23,8 @@ export default function Footer() {
           gap: 24, flexWrap: 'wrap',
         }}>
           <div>
-            <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 22, fontWeight: 700, color: 'var(--navy)', lineHeight: 1.2 }}>
-              Charged with a crime? Call now — it's free.
+            <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 22, fontWeight: 700, color: 'var(--navy)', lineHeight: 1.2 }}>
+              Charged with a crime? Call now. It's free.
             </div>
             <div style={{ fontSize: 14, color: 'rgba(10,22,40,0.7)', marginTop: 5 }}>
               Available 6am – 8pm · Free & confidential consultations · Payment plans available
@@ -54,7 +54,7 @@ export default function Footer() {
               borderRight: i < arr.length - 1 ? '1px solid rgba(201,168,76,0.15)' : 'none',
               textAlign: 'center',
             }}>
-              <div style={{ fontFamily: 'Source Sans 3, sans-serif', fontSize: 13, fontWeight: 700, color: 'var(--white)' }}>{label}</div>
+              <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 13, fontWeight: 700, color: 'var(--white)' }}>{label}</div>
               <div style={{ fontSize: 12, color: 'var(--gold)', marginTop: 2 }}>{sub}</div>
             </div>
           ))}
@@ -67,7 +67,7 @@ export default function Footer() {
 
           {/* Brand column */}
           <div>
-            <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, color: 'var(--white)', marginBottom: 6 }}>
+            <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 18, color: 'var(--white)', marginBottom: 6 }}>
               Tobin Law Office
             </div>
             <div style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 18 }}>
@@ -93,7 +93,7 @@ export default function Footer() {
 
           {/* Practice areas */}
           <div>
-            <div style={{ fontFamily: 'Source Sans 3, sans-serif', fontSize: 11, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 18 }}>
+            <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 11, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 18 }}>
               Practice Areas
             </div>
             {PRACTICE_LINKS.map(([label, href]) => (
@@ -106,7 +106,7 @@ export default function Footer() {
 
           {/* Service areas */}
           <div>
-            <div style={{ fontFamily: 'Source Sans 3, sans-serif', fontSize: 11, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 18 }}>
+            <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 11, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 18 }}>
               Cities Served
             </div>
             {SERVICE_CITIES.map(city => (
@@ -116,7 +116,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <div style={{ fontFamily: 'Source Sans 3, sans-serif', fontSize: 11, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 18 }}>
+            <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 11, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 18 }}>
               Contact
             </div>
             <div style={{ fontSize: 13, lineHeight: 1.9 }}>
@@ -139,7 +139,7 @@ export default function Footer() {
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '18px 24px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', textAlign: 'center', fontSize: 12, color: 'rgba(255,255,255,0.28)', lineHeight: 1.7 }}>
           © {new Date().getFullYear()} Tobin Law Office · All Rights Reserved · Attorney Timothy Tobin · State Bar of Arizona<br />
-          DISCLAIMER: Content on this website is for informational purposes only and does not constitute legal advice. No attorney-client relationship is formed by use of this website or submission of any form.
+          Content on this site is for general information only and does not constitute legal advice. No attorney-client relationship is created by visiting or using this site.
         </div>
       </div>
 

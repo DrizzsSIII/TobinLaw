@@ -24,14 +24,17 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15.5px;
   color: var(--text-body);
   background: var(--white);
   line-height: 1.6;
 }
 
+p { line-height: 1.85; }
+
 h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
   color: var(--navy);
   line-height: 1.2;
 }
@@ -47,7 +50,7 @@ img { max-width: 100%; }
   display: inline-block;
   background: var(--gold);
   color: var(--navy);
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 700;
   font-size: 15px;
   padding: 14px 32px;
@@ -71,7 +74,7 @@ img { max-width: 100%; }
   display: inline-block;
   background: var(--navy);
   color: var(--white);
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 700;
   font-size: 15px;
   padding: 14px 32px;
@@ -91,7 +94,7 @@ img { max-width: 100%; }
   display: inline-block;
   background: transparent;
   color: var(--white);
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 600;
   font-size: 15px;
   padding: 13px 30px;
@@ -117,7 +120,7 @@ img { max-width: 100%; }
   border-radius: 3px;
   padding: 11px 13px;
   font-size: 14px;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   color: var(--text-body);
   outline: none;
   background: var(--white);
@@ -137,7 +140,7 @@ img { max-width: 100%; }
   padding: 11px 14px;
   color: var(--white);
   font-size: 14px;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   outline: none;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
@@ -150,7 +153,7 @@ img { max-width: 100%; }
 
 /* ─── Typography helpers ─── */
 .section-label {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -187,7 +190,7 @@ img { max-width: 100%; }
   align-items: center;
   padding: 20px 24px;
   cursor: pointer;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 600;
   font-size: 15px;
   color: var(--navy);
@@ -216,7 +219,7 @@ img { max-width: 100%; }
     right: 0;
     background: var(--gold);
     color: var(--navy);
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     font-size: 15px;
     padding: 14px 20px;
@@ -235,6 +238,7 @@ img { max-width: 100%; }
   .photo-hero      { flex-direction: column !important; }
   .photo-hero-photo { flex: none !important; height: 280px !important; }
   .photo-hero-content { padding: 40px 24px !important; }
+  .why-grid        { grid-template-columns: 1fr 1fr !important; }
   .about-grid      { grid-template-columns: 1fr !important; }
   .bio-grid     { grid-template-columns: 1fr !important; }
   .contact-grid { grid-template-columns: 1fr !important; }
@@ -250,7 +254,7 @@ img { max-width: 100%; }
 /* ─── Legacy class shims (kept for any remaining usages) ─── */
 .btn-primary {
   display: inline-block; background: var(--gold); color: var(--navy);
-  font-family: 'Source Sans 3', sans-serif; font-weight: 700; font-size: 15px;
+  font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 15px;
   padding: 14px 32px; border-radius: 2px;
   transition: background 0.18s, transform 0.15s;
   cursor: pointer; border: none;

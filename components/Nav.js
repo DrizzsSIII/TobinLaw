@@ -29,7 +29,7 @@ export default function Nav() {
         {/* Logo */}
         <Link href="/" style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
           <span style={{
-            fontFamily: 'Playfair Display, serif',
+            fontFamily: 'Cormorant Garamond, serif',
             fontSize: 20, fontWeight: 700,
             color: 'var(--white)', letterSpacing: '0.01em',
           }}>Tobin Law Office</span>
@@ -45,7 +45,7 @@ export default function Nav() {
             const active = isActive(href);
             return (
               <Link key={label} href={href} style={{
-                fontFamily: 'Source Sans 3, sans-serif',
+                fontFamily: 'DM Sans, sans-serif',
                 fontSize: 14, fontWeight: 500,
                 color: active ? 'var(--gold)' : 'rgba(255,255,255,0.8)',
                 letterSpacing: '0.02em',
@@ -99,7 +99,7 @@ export default function Nav() {
               style={{
                 display: 'block', padding: '13px 0',
                 color: isActive(href) ? 'var(--gold)' : 'rgba(255,255,255,0.85)',
-                fontFamily: 'Source Sans 3, sans-serif',
+                fontFamily: 'DM Sans, sans-serif',
                 fontSize: 16, fontWeight: 500,
                 borderBottom: '1px solid rgba(255,255,255,0.07)',
               }}
@@ -108,7 +108,7 @@ export default function Nav() {
           <a href="tel:4804474837" style={{
             display: 'block', marginTop: 16, textAlign: 'center',
             background: 'var(--gold)', color: 'var(--navy)',
-            fontFamily: 'Source Sans 3, sans-serif',
+            fontFamily: 'DM Sans, sans-serif',
             fontWeight: 700, fontSize: 16,
             padding: '13px', borderRadius: 2,
           }}>(480) 447-4837</a>

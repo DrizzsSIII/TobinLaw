@@ -29,7 +29,7 @@ export default function About() {
         }} />
         <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
           <span className="section-label">Your Defense Attorney</span>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(28px, 5vw, 48px)', color: 'var(--white)', lineHeight: 1.15 }}>
+          <h1 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(28px, 5vw, 48px)', color: 'var(--white)', lineHeight: 1.15 }}>
             Timothy Tobin
           </h1>
           <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.65)', marginTop: 14 }}>
@@ -44,17 +44,17 @@ export default function About() {
 
           {/* Bio text */}
           <div>
-            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 28, color: 'var(--navy)', marginBottom: 8 }}>
+            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 28, color: 'var(--navy)', marginBottom: 8 }}>
               He Knows How the Government Thinks.<br />Now He Uses That Against Them.
             </h2>
             <div className="divider-gold" style={{ marginBottom: 30 }} />
 
             {[
-              "Timothy Tobin began his legal career as a prosecutor for two Arizona government agencies, including Maricopa County. As a prosecutor, he investigated and prosecuted cases referred from agencies including the Chandler Police Department — DUI arrests, drug offenses, domestic violence calls, assault charges, and more.",
+              "Timothy Tobin began his legal career as a prosecutor for two Arizona government agencies, including Maricopa County. As a prosecutor, he investigated and prosecuted cases referred from the Chandler Police Department: DUI arrests, drug offenses, domestic violence calls, assault charges, and more.",
               "That experience gave Tim an inside view of exactly how law enforcement builds its cases, what prosecutors are looking for, and where the state's evidence is often weakest. He saw firsthand how cases could be won or lost based on a single procedural detail, a weakness in the chain of evidence, or a failure to challenge the state's narrative early.",
-              "In criminal defense, that knowledge is everything. Tim now applies his prosecutorial experience to defend his clients across Maricopa County — aggressively challenging the government's case at every step.",
+              "In criminal defense, that knowledge is everything. Tim now applies his prosecutorial experience to defend his clients across Maricopa County, aggressively challenging the government's case at every step.",
               "Unlike large law firms that pass clients between associates, Tim handles every aspect of every case personally. Clients have his direct cell phone and email. Questions get answered. Cases get attention.",
-              "Tim's family lives in the Chandler area. He's not just representing clients in these courts — he practices here, lives here, and is personally invested in the community he serves.",
+              "Tim's family lives in the Chandler area. He's not just representing clients in these courts. He practices here, lives here, and is personally invested in the community he serves.",
             ].map((para, i) => (
               <p key={i} style={{ fontSize: 15, lineHeight: 1.88, color: 'var(--text-body)', marginBottom: 20 }}>{para}</p>
             ))}
@@ -81,7 +81,7 @@ export default function About() {
               <p style={{
                 fontSize: 12, color: '#c9a84c', textAlign: 'center',
                 letterSpacing: '0.06em', textTransform: 'uppercase',
-                fontFamily: 'Source Sans 3, sans-serif', fontWeight: 600,
+                fontFamily: 'DM Sans, sans-serif', fontWeight: 600,
               }}>
                 Timothy Tobin · Criminal Defense Attorney
               </p>
@@ -106,7 +106,7 @@ export default function About() {
 
             {/* Contact quick */}
             <div style={{ background: 'var(--off-white)', borderRadius: 5, padding: '24px', border: '1px solid var(--gray-light)', textAlign: 'center' }}>
-              <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 16, color: 'var(--navy)', marginBottom: 14 }}>
+              <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 16, color: 'var(--navy)', marginBottom: 14 }}>
                 Ready to talk to Tim?
               </div>
               <a href="tel:4804474837" className="cta-navy" style={{ display: 'block', fontSize: 17, textTransform: 'none', marginBottom: 10 }}>
@@ -115,7 +115,7 @@ export default function About() {
               <Link href="/contact" style={{
                 display: 'block', padding: '11px',
                 border: '1.5px solid var(--navy)', borderRadius: 2,
-                fontFamily: 'Source Sans 3, sans-serif', fontWeight: 600, fontSize: 14,
+                fontFamily: 'DM Sans, sans-serif', fontWeight: 600, fontSize: 14,
                 color: 'var(--navy)', transition: 'background 0.15s',
               }}
               onMouseEnter={e => e.currentTarget.style.background = 'rgba(10,22,40,0.06)'}
@@ -132,7 +132,7 @@ export default function About() {
       {/* Credential stats */}
       <section style={{ padding: '64px 24px', background: 'var(--off-white)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 28, color: 'var(--navy)', marginBottom: 36, textAlign: 'center' }}>
+          <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 28, color: 'var(--navy)', marginBottom: 36, textAlign: 'center' }}>
             What Sets Tim Apart
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 20 }}>
@@ -147,8 +147,8 @@ export default function About() {
                 padding: '30px 20px', borderRadius: '0 0 5px 5px', textAlign: 'center',
                 boxShadow: 'var(--shadow-sm)',
               }}>
-                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 38, fontWeight: 700, color: 'var(--navy)', marginBottom: 6 }}>{n}</div>
-                <div style={{ fontFamily: 'Source Sans 3, sans-serif', fontWeight: 700, fontSize: 15, color: 'var(--navy)', marginBottom: 8 }}>{label}</div>
+                <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 38, fontWeight: 700, color: 'var(--navy)', marginBottom: 6 }}>{n}</div>
+                <div style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: 15, color: 'var(--navy)', marginBottom: 8 }}>{label}</div>
                 <div style={{ fontSize: 13, color: 'var(--gray-mid)', lineHeight: 1.55 }}>{sub}</div>
               </div>
             ))}
@@ -160,7 +160,7 @@ export default function About() {
       <section style={{ padding: '64px 24px', background: 'var(--navy)' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center' }}>
           <span className="section-label">Recognition</span>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 26, color: 'var(--white)', marginTop: 8, marginBottom: 40 }}>
+          <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 26, color: 'var(--white)', marginTop: 8, marginBottom: 40 }}>
             Awards &amp; Credentials
           </h2>
           <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 16 }}>
@@ -177,7 +177,7 @@ export default function About() {
                 borderRadius: '0 0 4px 4px',
                 padding: '22px 28px', minWidth: 165, textAlign: 'center',
               }}>
-                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 15, fontWeight: 600, color: 'var(--white)', marginBottom: 6 }}>{title}</div>
+                <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 15, fontWeight: 600, color: 'var(--white)', marginBottom: 6 }}>{title}</div>
                 <div style={{ fontSize: 12, color: 'var(--gold)', fontWeight: 600 }}>{sub}</div>
               </div>
             ))}

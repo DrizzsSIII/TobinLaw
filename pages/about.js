@@ -27,9 +27,14 @@ export default function About() {
           position: 'absolute', inset: 0, pointerEvents: 'none',
           backgroundImage: 'radial-gradient(ellipse 50% 80% at 90% 50%, rgba(201,168,76,0.07) 0%, transparent 70%)',
         }} />
+        <img src="/logo.webp" alt="" aria-hidden="true" style={{
+          position: 'absolute', top: 20, right: 24,
+          height: 36, width: 'auto',
+          filter: 'brightness(0) invert(1)', opacity: 0.2, pointerEvents: 'none',
+        }} />
         <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
           <span className="section-label">Your Defense Attorney</span>
-          <h1 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(28px, 5vw, 48px)', color: 'var(--white)', lineHeight: 1.15 }}>
+          <h1 style={{ fontFamily: 'Cinzel, serif', fontSize: 'clamp(28px, 5vw, 48px)', color: 'var(--white)', lineHeight: 1.15 }}>
             Timothy Tobin
           </h1>
           <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.65)', marginTop: 14 }}>
@@ -44,7 +49,7 @@ export default function About() {
 
           {/* Bio text */}
           <div>
-            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 28, color: 'var(--navy)', marginBottom: 8 }}>
+            <h2 style={{ fontFamily: 'Cinzel, serif', fontSize: 28, color: 'var(--navy)', marginBottom: 8 }}>
               He Knows How the Government Thinks.<br />Now He Uses That Against Them.
             </h2>
             <div className="divider-gold" style={{ marginBottom: 30 }} />
@@ -81,7 +86,7 @@ export default function About() {
               <p style={{
                 fontSize: 12, color: '#c9a84c', textAlign: 'center',
                 letterSpacing: '0.06em', textTransform: 'uppercase',
-                fontFamily: 'DM Sans, sans-serif', fontWeight: 600,
+                fontFamily: 'Raleway, sans-serif', fontWeight: 600,
               }}>
                 Timothy Tobin · Criminal Defense Attorney
               </p>
@@ -89,6 +94,11 @@ export default function About() {
 
             {/* Attorney details card */}
             <div style={{ background: 'var(--navy)', borderRadius: 5, padding: '26px 22px', border: '1px solid rgba(201,168,76,0.2)', boxShadow: 'var(--shadow-md)' }}>
+              <img src="/logo.webp" alt="Tobin Law Office" style={{
+                height: 40, width: 'auto',
+                filter: 'brightness(0) invert(1)', opacity: 0.6, marginBottom: 16,
+                display: 'block',
+              }} />
               {[
                 ['Jurisdiction',   'Maricopa County & statewide'],
                 ['Background',     'Former Arizona Prosecutor'],
@@ -106,7 +116,7 @@ export default function About() {
 
             {/* Contact quick */}
             <div style={{ background: 'var(--off-white)', borderRadius: 5, padding: '24px', border: '1px solid var(--gray-light)', textAlign: 'center' }}>
-              <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 16, color: 'var(--navy)', marginBottom: 14 }}>
+              <div style={{ fontFamily: 'Cinzel, serif', fontSize: 16, color: 'var(--navy)', marginBottom: 14 }}>
                 Ready to talk to Tim?
               </div>
               <a href="tel:4804474837" className="cta-navy" style={{ display: 'block', fontSize: 17, textTransform: 'none', marginBottom: 10 }}>
@@ -115,7 +125,7 @@ export default function About() {
               <Link href="/contact" style={{
                 display: 'block', padding: '11px',
                 border: '1.5px solid var(--navy)', borderRadius: 2,
-                fontFamily: 'DM Sans, sans-serif', fontWeight: 600, fontSize: 14,
+                fontFamily: 'Raleway, sans-serif', fontWeight: 600, fontSize: 14,
                 color: 'var(--navy)', transition: 'background 0.15s',
               }}
               onMouseEnter={e => e.currentTarget.style.background = 'rgba(10,22,40,0.06)'}
@@ -132,7 +142,7 @@ export default function About() {
       {/* Credential stats */}
       <section style={{ padding: '64px 24px', background: 'var(--off-white)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 28, color: 'var(--navy)', marginBottom: 36, textAlign: 'center' }}>
+          <h2 style={{ fontFamily: 'Cinzel, serif', fontSize: 28, color: 'var(--navy)', marginBottom: 36, textAlign: 'center' }}>
             What Sets Tim Apart
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 20 }}>
@@ -147,8 +157,8 @@ export default function About() {
                 padding: '30px 20px', borderRadius: '0 0 5px 5px', textAlign: 'center',
                 boxShadow: 'var(--shadow-sm)',
               }}>
-                <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 38, fontWeight: 700, color: 'var(--navy)', marginBottom: 6 }}>{n}</div>
-                <div style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: 15, color: 'var(--navy)', marginBottom: 8 }}>{label}</div>
+                <div style={{ fontFamily: 'Cinzel, serif', fontSize: 38, fontWeight: 700, color: 'var(--navy)', marginBottom: 6 }}>{n}</div>
+                <div style={{ fontFamily: 'Raleway, sans-serif', fontWeight: 700, fontSize: 15, color: 'var(--navy)', marginBottom: 8 }}>{label}</div>
                 <div style={{ fontSize: 13, color: 'var(--gray-mid)', lineHeight: 1.55 }}>{sub}</div>
               </div>
             ))}
@@ -160,7 +170,7 @@ export default function About() {
       <section style={{ padding: '64px 24px', background: 'var(--navy)' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center' }}>
           <span className="section-label">Recognition</span>
-          <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 26, color: 'var(--white)', marginTop: 8, marginBottom: 40 }}>
+          <h2 style={{ fontFamily: 'Cinzel, serif', fontSize: 26, color: 'var(--white)', marginTop: 8, marginBottom: 40 }}>
             Awards &amp; Credentials
           </h2>
           <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 16 }}>
@@ -177,7 +187,7 @@ export default function About() {
                 borderRadius: '0 0 4px 4px',
                 padding: '22px 28px', minWidth: 165, textAlign: 'center',
               }}>
-                <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 15, fontWeight: 600, color: 'var(--white)', marginBottom: 6 }}>{title}</div>
+                <div style={{ fontFamily: 'Cinzel, serif', fontSize: 15, fontWeight: 600, color: 'var(--white)', marginBottom: 6 }}>{title}</div>
                 <div style={{ fontSize: 12, color: 'var(--gold)', fontWeight: 600 }}>{sub}</div>
               </div>
             ))}

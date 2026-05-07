@@ -88,9 +88,14 @@ export default function PracticeAreas() {
           position: 'absolute', inset: 0, pointerEvents: 'none',
           backgroundImage: 'radial-gradient(ellipse 50% 80% at 90% 50%, rgba(201,168,76,0.07) 0%, transparent 70%)',
         }} />
+        <img src="/logo.webp" alt="" aria-hidden="true" style={{
+          position: 'absolute', top: 20, right: 24,
+          height: 36, width: 'auto',
+          filter: 'brightness(0) invert(1)', opacity: 0.2, pointerEvents: 'none',
+        }} />
         <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
           <span className="section-label">Criminal Defense</span>
-          <h1 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(28px, 5vw, 48px)', color: 'var(--white)', lineHeight: 1.15 }}>
+          <h1 style={{ fontFamily: 'Cinzel, serif', fontSize: 'clamp(28px, 5vw, 48px)', color: 'var(--white)', lineHeight: 1.15 }}>
             Practice Areas
           </h1>
           <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.65)', marginTop: 14, maxWidth: 560 }}>
@@ -104,7 +109,7 @@ export default function PracticeAreas() {
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: 8, flexWrap: 'wrap' }}>
           {AREAS.map(({ Icon, title, id }) => (
             <a key={id} href={`#${id}`} style={{
-              fontFamily: 'DM Sans, sans-serif', fontSize: 13, fontWeight: 600,
+              fontFamily: 'Raleway, sans-serif', fontSize: 13, fontWeight: 600,
               color: 'var(--navy)', background: 'var(--white)',
               border: '1px solid var(--gray-light)', borderRadius: 20,
               padding: '6px 14px', whiteSpace: 'nowrap',
@@ -133,8 +138,8 @@ export default function PracticeAreas() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 18 }}>
                   <span style={{ color: 'var(--navy)', flexShrink: 0 }}><Icon width={36} height={36} /></span>
                   <div>
-                    <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 26, color: 'var(--navy)', lineHeight: 1.15 }}>{title}</h2>
-                    <div style={{ fontSize: 13, color: 'var(--gold)', fontWeight: 600, marginTop: 4, fontFamily: 'DM Sans, sans-serif' }}>{tagline}</div>
+                    <h2 style={{ fontFamily: 'Cinzel, serif', fontSize: 26, color: 'var(--navy)', lineHeight: 1.15 }}>{title}</h2>
+                    <div style={{ fontSize: 13, color: 'var(--gold)', fontWeight: 600, marginTop: 4, fontFamily: 'Raleway, sans-serif' }}>{tagline}</div>
                   </div>
                 </div>
                 {desc.map((para, j) => (
@@ -151,7 +156,7 @@ export default function PracticeAreas() {
                 padding: '28px 26px', borderLeft: '4px solid var(--gold)',
                 alignSelf: 'start',
               }}>
-                <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--navy)', marginBottom: 18 }}>
+                <div style={{ fontFamily: 'Raleway, sans-serif', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--navy)', marginBottom: 18 }}>
                   Charges We Defend
                 </div>
                 {bullets.map(b => (
@@ -161,8 +166,8 @@ export default function PracticeAreas() {
                   </div>
                 ))}
                 <div style={{ marginTop: 24, padding: '18px', borderRadius: 4, background: 'var(--navy)', textAlign: 'center' }}>
-                  <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 14, color: 'var(--white)', marginBottom: 6 }}>Charged with this?</div>
-                  <a href="tel:4804474837" style={{ color: 'var(--gold)', fontWeight: 700, fontSize: 18, fontFamily: 'DM Sans, sans-serif', display: 'block' }}>
+                  <div style={{ fontFamily: 'Cinzel, serif', fontSize: 14, color: 'var(--white)', marginBottom: 6 }}>Charged with this?</div>
+                  <a href="tel:4804474837" style={{ color: 'var(--gold)', fontWeight: 700, fontSize: 18, fontFamily: 'Raleway, sans-serif', display: 'block' }}>
                     (480) 447-4837
                   </a>
                   <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', marginTop: 4 }}>Free &amp; confidential</div>
@@ -177,7 +182,7 @@ export default function PracticeAreas() {
       <section style={{ padding: '64px 24px', background: 'var(--navy)', textAlign: 'center' }}>
         <div style={{ maxWidth: 600, margin: '0 auto' }}>
           <span className="section-label">Get Help Now</span>
-          <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(24px, 4vw, 36px)', color: 'var(--white)', marginTop: 8, marginBottom: 16 }}>
+          <h2 style={{ fontFamily: 'Cinzel, serif', fontSize: 'clamp(24px, 4vw, 36px)', color: 'var(--white)', marginTop: 8, marginBottom: 16 }}>
             Don't Face the State Alone
           </h2>
           <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.62)', lineHeight: 1.72, marginBottom: 32 }}>

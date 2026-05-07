@@ -23,7 +23,7 @@ export default function Footer() {
           gap: 24, flexWrap: 'wrap',
         }}>
           <div>
-            <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 22, fontWeight: 700, color: 'var(--navy)', lineHeight: 1.2 }}>
+            <div style={{ fontFamily: 'Cinzel, serif', fontSize: 22, fontWeight: 700, color: 'var(--navy)', lineHeight: 1.2 }}>
               Charged with a crime? Call now. It's free.
             </div>
             <div style={{ fontSize: 14, color: 'rgba(10,22,40,0.7)', marginTop: 5 }}>
@@ -54,7 +54,7 @@ export default function Footer() {
               borderRight: i < arr.length - 1 ? '1px solid rgba(201,168,76,0.15)' : 'none',
               textAlign: 'center',
             }}>
-              <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 13, fontWeight: 700, color: 'var(--white)' }}>{label}</div>
+              <div style={{ fontFamily: 'Raleway, sans-serif', fontSize: 13, fontWeight: 700, color: 'var(--white)' }}>{label}</div>
               <div style={{ fontSize: 12, color: 'var(--gold)', marginTop: 2 }}>{sub}</div>
             </div>
           ))}
@@ -67,12 +67,17 @@ export default function Footer() {
 
           {/* Brand column */}
           <div>
-            <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 18, color: 'var(--white)', marginBottom: 6 }}>
-              Tobin Law Office
-            </div>
-            <div style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 18 }}>
-              Criminal Defense · Arizona
-            </div>
+            <img
+              src="/logo.webp"
+              alt="Tobin Law Office"
+              style={{
+                height: 52,
+                width: 'auto',
+                filter: 'brightness(0) invert(1)',
+                opacity: 0.85,
+                marginBottom: 16,
+              }}
+            />
             <div style={{ fontSize: 13, lineHeight: 1.85, marginBottom: 20 }}>
               3100 W Ray Rd #201<br />Chandler, AZ 85226<br /><br />
               1910 S Stapley Dr #221<br />Mesa, AZ 85204
@@ -93,7 +98,7 @@ export default function Footer() {
 
           {/* Practice areas */}
           <div>
-            <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 11, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 18 }}>
+            <div style={{ fontFamily: 'Raleway, sans-serif', fontSize: 11, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 18 }}>
               Practice Areas
             </div>
             {PRACTICE_LINKS.map(([label, href]) => (
@@ -106,7 +111,7 @@ export default function Footer() {
 
           {/* Service areas */}
           <div>
-            <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 11, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 18 }}>
+            <div style={{ fontFamily: 'Raleway, sans-serif', fontSize: 11, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 18 }}>
               Cities Served
             </div>
             {SERVICE_CITIES.map(city => (
@@ -116,7 +121,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 11, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 18 }}>
+            <div style={{ fontFamily: 'Raleway, sans-serif', fontSize: 11, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 18 }}>
               Contact
             </div>
             <div style={{ fontSize: 13, lineHeight: 1.9 }}>

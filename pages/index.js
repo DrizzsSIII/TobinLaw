@@ -169,9 +169,9 @@ export default function Home() {
             <div className="animate-in delay-1">
               <span className="section-label">Chandler &amp; Mesa, Arizona</span>
               <h1 style={{
-                fontFamily: 'Cormorant Garamond, serif',
-                fontSize: 'clamp(28px, 3.2vw, 52px)',
-                fontWeight: 700, color: 'var(--white)',
+                fontFamily: 'Cinzel, serif',
+                fontSize: 'clamp(28px, 4.5vw, 48px)',
+                fontWeight: 600, color: 'var(--white)',
                 lineHeight: 1.1, marginBottom: 20, letterSpacing: '-0.02em',
               }}>
                 You needed a lawyer yesterday.{' '}
@@ -202,7 +202,7 @@ export default function Home() {
                 ].map(([val, lbl, large], idx, arr) => (
                   <div key={lbl} style={{ display: 'flex', alignItems: 'center' }}>
                     <div style={{ paddingRight: 20, paddingLeft: idx > 0 ? 20 : 0 }}>
-                      <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: large ? 28 : 20, fontWeight: 700, color: 'var(--gold)' }}>{val}</div>
+                      <div style={{ fontFamily: 'Cinzel, serif', fontSize: large ? 28 : 20, fontWeight: 700, color: 'var(--gold)' }}>{val}</div>
                       <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', marginTop: 2 }}>{lbl}</div>
                     </div>
                     {idx < arr.length - 1 && (
@@ -220,7 +220,7 @@ export default function Home() {
                 backdropFilter: 'blur(12px)',
                 boxShadow: '0 12px 40px rgba(0,0,0,0.35)',
               }}>
-                <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 17, fontWeight: 700, color: 'var(--white)', marginBottom: 4 }}>
+                <div style={{ fontFamily: 'Cinzel, serif', fontSize: 17, fontWeight: 700, color: 'var(--white)', marginBottom: 4 }}>
                   Quick Contact
                 </div>
                 <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)', marginBottom: 16 }}>
@@ -233,7 +233,7 @@ export default function Home() {
                     borderRadius: 4, padding: '24px 16px', textAlign: 'center',
                   }}>
                     <div style={{ fontSize: 28, color: 'var(--gold)', marginBottom: 8 }}>✓</div>
-                    <strong style={{ fontFamily: 'Cormorant Garamond, serif', color: 'var(--white)' }}>Got it. Tim will call you.</strong>
+                    <strong style={{ fontFamily: 'Cinzel, serif', color: 'var(--white)' }}>Got it. Tim will call you.</strong>
                     <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', marginTop: 8 }}>
                       Expect a call within a few hours.
                     </p>
@@ -287,7 +287,7 @@ export default function Home() {
               padding: '10px 28px', textAlign: 'center',
               borderRight: i < arr.length - 1 ? '1px solid var(--gray-light)' : 'none',
             }}>
-              <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 13, fontWeight: 700, color: 'var(--navy)' }}>{label}</div>
+              <div style={{ fontFamily: 'Raleway, sans-serif', fontSize: 13, fontWeight: 700, color: 'var(--navy)' }}>{label}</div>
               <div style={{ fontSize: 12, color: 'var(--gold)', fontWeight: 600 }}>{sub}</div>
             </div>
           ))}
@@ -298,7 +298,7 @@ export default function Home() {
       <section id="why-us" style={{ padding: '84px 24px', background: 'var(--white)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 56 }}>
-            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(26px, 4vw, 40px)', color: 'var(--navy)' }}>
+            <h2 style={{ fontFamily: 'Cinzel, serif', fontSize: 'clamp(26px, 4vw, 40px)', color: 'var(--navy)' }}>
               Why his background changes what's possible in your case
             </h2>
           </div>
@@ -313,7 +313,7 @@ export default function Home() {
                 <div style={{ color: 'var(--navy)', marginBottom: 14 }}>
                   <Icon width={28} height={28} />
                 </div>
-                <h3 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 18, color: 'var(--navy)', marginBottom: 10 }}>{title}</h3>
+                <h3 style={{ fontFamily: 'Cinzel, serif', fontSize: 18, color: 'var(--navy)', marginBottom: 10 }}>{title}</h3>
                 <p style={{ fontSize: 14, lineHeight: 1.78, color: 'var(--text-body)' }}>{desc}</p>
               </div>
             ))}
@@ -329,7 +329,7 @@ export default function Home() {
             {/* Left: text */}
             <div>
               <span className="section-label">Free Case Evaluation</span>
-              <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--white)', marginTop: 8, marginBottom: 16, lineHeight: 1.2 }}>
+              <h2 style={{ fontFamily: 'Cinzel, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--white)', marginTop: 8, marginBottom: 16, lineHeight: 1.2 }}>
                 Explain Your Case in 90 Seconds
               </h2>
               <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.65)', lineHeight: 1.8, marginBottom: 24 }}>
@@ -362,7 +362,7 @@ export default function Home() {
               onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'}
               onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.22)'}
               >
-                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: 14, fontFamily: 'DM Sans, sans-serif' }}>
+                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: 14, fontFamily: 'Raleway, sans-serif' }}>
                   Step 1 of 7: Select your charge type
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 14 }}>
@@ -377,7 +377,7 @@ export default function Home() {
                       borderRadius: 4, padding: '12px 12px',
                       transition: 'border-color 0.15s',
                     }}>
-                      <div style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: 13, color: 'var(--white)', marginBottom: 3 }}>{label}</div>
+                      <div style={{ fontFamily: 'Raleway, sans-serif', fontWeight: 700, fontSize: 13, color: 'var(--white)', marginBottom: 3 }}>{label}</div>
                       <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', lineHeight: 1.4 }}>{sub}</div>
                     </div>
                   ))}
@@ -396,12 +396,12 @@ export default function Home() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 40, flexWrap: 'wrap', gap: 16 }}>
             <div>
               <span className="section-label">What We Defend</span>
-              <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', marginTop: 8, color: 'var(--navy)' }}>
+              <h2 style={{ fontFamily: 'Cinzel, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', marginTop: 8, color: 'var(--navy)' }}>
                 Practice Areas
               </h2>
             </div>
             <Link href="/practice-areas" style={{
-              fontFamily: 'DM Sans, sans-serif', fontSize: 14, fontWeight: 600,
+              fontFamily: 'Raleway, sans-serif', fontSize: 14, fontWeight: 600,
               color: 'var(--gold)', borderBottom: '1px solid var(--gold)', paddingBottom: 2,
               transition: 'opacity 0.15s',
             }}
@@ -420,9 +420,9 @@ export default function Home() {
                 <div style={{ color: 'var(--gold)', marginBottom: 10 }}>
                   <Icon width={28} height={28} />
                 </div>
-                <h3 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 18, color: 'var(--white)', marginBottom: 8 }}>{title}</h3>
+                <h3 style={{ fontFamily: 'Cinzel, serif', fontSize: 18, color: 'var(--white)', marginBottom: 8 }}>{title}</h3>
                 <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.62)', lineHeight: 1.68, marginBottom: 14 }}>{desc}</p>
-                <span style={{ fontSize: 12, color: 'var(--gold)', fontWeight: 600, fontFamily: 'DM Sans, sans-serif' }}>
+                <span style={{ fontSize: 12, color: 'var(--gold)', fontWeight: 600, fontFamily: 'Raleway, sans-serif' }}>
                   {cta}
                 </span>
               </Link>
@@ -436,7 +436,7 @@ export default function Home() {
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 52 }}>
             <span className="section-label">Client Reviews</span>
-            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--white)', marginTop: 8 }}>
+            <h2 style={{ fontFamily: 'Cinzel, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--white)', marginTop: 8 }}>
               ★ 5.0 on Google · 128 Reviews
             </h2>
             <div className="divider-gold" style={{ margin: '18px auto 0' }} />
@@ -451,12 +451,12 @@ export default function Home() {
               }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
                   <Stars n={stars} />
-                  <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', fontFamily: 'DM Sans, sans-serif' }}>{date}</span>
+                  <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', fontFamily: 'Raleway, sans-serif' }}>{date}</span>
                 </div>
                 <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, fontStyle: 'italic', marginBottom: 16 }}>
                   "{text}"
                 </p>
-                <div style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 600, fontSize: 13, color: 'var(--gold)' }}>
+                <div style={{ fontFamily: 'Raleway, sans-serif', fontWeight: 600, fontSize: 13, color: 'var(--gold)' }}>
                   — {name}, {location}
                 </div>
               </div>
@@ -477,7 +477,7 @@ export default function Home() {
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 52 }}>
             <span className="section-label">Case Outcomes</span>
-            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--white)', marginTop: 8 }}>
+            <h2 style={{ fontFamily: 'Cinzel, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--white)', marginTop: 8 }}>
               What happened when clients called Tim
             </h2>
             <div className="divider-gold" style={{ margin: '18px auto 0' }} />
@@ -495,7 +495,7 @@ export default function Home() {
                 <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.38)', marginBottom: 8 }}>
                   {charge}
                 </div>
-                <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 18, fontWeight: 700, color: 'var(--gold)', marginBottom: 10, lineHeight: 1.25 }}>
+                <div style={{ fontFamily: 'Cinzel, serif', fontSize: 18, fontWeight: 700, color: 'var(--gold)', marginBottom: 10, lineHeight: 1.25 }}>
                   {outcome}
                 </div>
                 <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)', lineHeight: 1.68 }}>{detail}</p>
@@ -514,7 +514,7 @@ export default function Home() {
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
             <div>
-              <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--navy)', marginBottom: 20 }}>
+              <h2 style={{ fontFamily: 'Cinzel, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--navy)', marginBottom: 20 }}>
                 He spent years on the other side of the courtroom.
               </h2>
               <p style={{ fontSize: 15, lineHeight: 1.85, color: 'var(--text-body)', marginBottom: 16 }}>
@@ -548,7 +548,7 @@ export default function Home() {
                 }}>
                   <span style={{ color: 'var(--gold)', fontSize: 18, marginTop: 1, flexShrink: 0 }}>✓</span>
                   <div>
-                    <div style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 600, color: 'var(--white)', fontSize: 15 }}>{val}</div>
+                    <div style={{ fontFamily: 'Raleway, sans-serif', fontWeight: 600, color: 'var(--white)', fontSize: 15 }}>{val}</div>
                     <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', marginTop: 2 }}>{lbl}</div>
                   </div>
                 </div>
@@ -562,7 +562,7 @@ export default function Home() {
       <section style={{ padding: '84px 24px', background: 'var(--off-white)' }}>
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 48 }}>
-            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--navy)' }}>
+            <h2 style={{ fontFamily: 'Cinzel, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--navy)' }}>
               Questions people search at midnight
             </h2>
           </div>

@@ -299,7 +299,7 @@ export default function Home() {
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 56 }}>
             <h2 style={{ fontFamily: 'Cinzel, serif', fontSize: 'clamp(26px, 4vw, 40px)', color: 'var(--navy)' }}>
-              Why his background changes what's possible in your case
+              Former Prosecutor. Your Defender.
             </h2>
           </div>
 
@@ -478,7 +478,7 @@ export default function Home() {
           <div style={{ textAlign: 'center', marginBottom: 52 }}>
             <span className="section-label">Case Outcomes</span>
             <h2 style={{ fontFamily: 'Cinzel, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--white)', marginTop: 8 }}>
-              What happened when clients called Tim
+              How Cases Resolved
             </h2>
             <div className="divider-gold" style={{ margin: '18px auto 0' }} />
           </div>
@@ -515,7 +515,7 @@ export default function Home() {
           <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
             <div>
               <h2 style={{ fontFamily: 'Cinzel, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--navy)', marginBottom: 20 }}>
-                He spent years on the other side of the courtroom.
+                From Prosecutor to Defender.
               </h2>
               <p style={{ fontSize: 15, lineHeight: 1.85, color: 'var(--text-body)', marginBottom: 16 }}>
                 Timothy Tobin is a former prosecutor for two Arizona government agencies, including Maricopa County. He knows how police build cases, how prosecutors think, and how courts work. He spent years on the other side of the aisle.
@@ -563,7 +563,7 @@ export default function Home() {
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 48 }}>
             <h2 style={{ fontFamily: 'Cinzel, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--navy)' }}>
-              Questions people search at midnight
+              Common Questions
             </h2>
           </div>
 

@@ -50,7 +50,7 @@ export default function About() {
           {/* Bio text */}
           <div>
             <h2 style={{ fontFamily: 'Cinzel, serif', fontSize: 28, color: 'var(--navy)', marginBottom: 8 }}>
-              He Knows How the Government Thinks.<br />Now He Uses That Against Them.
+              Inside Knowledge.<br />Real Defense.
             </h2>
             <div className="divider-gold" style={{ marginBottom: 30 }} />
 

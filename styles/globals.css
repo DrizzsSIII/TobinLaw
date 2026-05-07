@@ -230,9 +230,12 @@ img { max-width: 100%; }
   .desktop-nav { display: none !important; }
   .hamburger   { display: flex !important; }
 
-  .hero-grid    { grid-template-columns: 1fr !important; }
-  .hero-card    { display: block !important; }
-  .about-grid   { grid-template-columns: 1fr !important; }
+  .hero-grid       { grid-template-columns: 1fr !important; }
+  .hero-card       { display: block !important; }
+  .photo-hero      { flex-direction: column !important; }
+  .photo-hero-photo { flex: none !important; height: 280px !important; }
+  .photo-hero-content { padding: 40px 24px !important; }
+  .about-grid      { grid-template-columns: 1fr !important; }
   .bio-grid     { grid-template-columns: 1fr !important; }
   .contact-grid { grid-template-columns: 1fr !important; }
   .area-row     { grid-template-columns: 1fr !important; }

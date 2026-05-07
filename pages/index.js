@@ -141,56 +141,59 @@ export default function Home() {
       <Nav />
 
       {/* ── HERO ── */}
-      <section style={{
-        background: 'var(--navy)',
-        color: 'var(--white)',
-        padding: '80px 24px 76px',
-        position: 'relative',
-        overflow: 'hidden',
-      }}>
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: 'var(--gold)', zIndex: 2 }} />
-        <div style={{
-          position: 'absolute', inset: 0, pointerEvents: 'none',
-          backgroundImage: [
-            'radial-gradient(ellipse 60% 70% at 80% 30%, rgba(201,168,76,0.08) 0%, transparent 70%)',
-            'radial-gradient(ellipse 50% 60% at 10% 80%, rgba(15,31,61,0.6) 0%, transparent 70%)',
-          ].join(', '),
-        }} />
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: grainBg, opacity: 0.032, pointerEvents: 'none' }} />
+      <section style={{ position: 'relative', overflow: 'hidden', color: 'var(--white)' }}>
+        {/* Gold top bar */}
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: 'var(--gold)', zIndex: 3 }} />
 
-        <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
-          <div className="hero-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 310px', gap: 48, alignItems: 'start' }}>
+        <div className="photo-hero" style={{ display: 'flex', minHeight: 600 }}>
 
-            {/* Left copy */}
+          {/* LEFT: Photo column (55%) */}
+          <div className="photo-hero-photo" style={{ flex: '0 0 55%', position: 'relative', overflow: 'hidden' }}>
+            <img
+              src="/tim-hero.jpg"
+              alt="Attorney Timothy Tobin"
+              style={{ objectFit: 'cover', objectPosition: 'center top', width: '100%', height: '100%', display: 'block' }}
+            />
+            {/* Right-edge bleed into navy */}
+            <div style={{
+              position: 'absolute', inset: 0, pointerEvents: 'none',
+              background: 'linear-gradient(to right, transparent 70%, #0a1628 100%)',
+            }} />
+          </div>
+
+          {/* RIGHT: Text + form column (45%) */}
+          <div className="photo-hero-content" style={{
+            flex: '0 0 45%', background: '#0a1628',
+            padding: '80px 48px', display: 'flex', flexDirection: 'column', justifyContent: 'center',
+          }}>
             <div className="animate-in delay-1">
               <span className="section-label">Chandler &amp; Mesa, Arizona</span>
               <h1 style={{
                 fontFamily: 'Playfair Display, serif',
-                fontSize: 'clamp(34px, 5.2vw, 60px)',
+                fontSize: 'clamp(28px, 3.2vw, 52px)',
                 fontWeight: 800, color: 'var(--white)',
-                lineHeight: 1.08, marginBottom: 22, letterSpacing: '-0.02em',
+                lineHeight: 1.1, marginBottom: 20, letterSpacing: '-0.02em',
               }}>
-                Facing Criminal<br />Charges?{' '}
-                <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>Fight Back</em><br />
-                With a Former Prosecutor.
+                Your Charges Are Serious.{' '}
+                <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>So Is Tim Tobin.</em>
               </h1>
 
-              <div style={{ width: 52, height: 2, background: 'var(--gold)', marginBottom: 24 }} />
+              <div style={{ width: 52, height: 2, background: 'var(--gold)', marginBottom: 20 }} />
 
-              <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.82)', lineHeight: 1.75, maxWidth: 540, marginBottom: 32 }}>
-                Attorney Timothy Tobin is a former Arizona prosecutor who now defends the accused — with flat-rate fees, direct access to your lawyer, and a proven track record of reduced and dismissed charges across Maricopa County.
+              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.78)', lineHeight: 1.78, marginBottom: 28 }}>
+                A former Arizona prosecutor who spent years building cases like yours — now he uses that knowledge to tear them apart. Flat rates. Direct access. Real results across Maricopa County.
               </p>
 
-              <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 44 }}>
-                <a href="tel:4804474837" className="cta-gold" style={{ fontSize: 16, padding: '15px 34px', textTransform: 'none' }}>
+              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 36 }}>
+                <a href="tel:4804474837" className="cta-gold" style={{ fontSize: 15, padding: '14px 28px', textTransform: 'none' }}>
                   Call (480) 447-4837
                 </a>
-                <Link href="/case-review" className="cta-outline" style={{ fontSize: 15 }}>
-                  Free Case Review
+                <Link href="/case-review" className="cta-outline" style={{ fontSize: 14 }}>
+                  Start Free Case Review →
                 </Link>
               </div>
 
-              <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap', marginBottom: 36 }}>
                 {[
                   ['★ 5.0', '128 Google Reviews'],
                   ['$0',    'Free Consultation'],
@@ -198,72 +201,72 @@ export default function Home() {
                   ['6am–8pm','Extended Hours'],
                 ].map(([val, lbl]) => (
                   <div key={lbl}>
-                    <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 20, fontWeight: 700, color: 'var(--gold)' }}>{val}</div>
-                    <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', marginTop: 2 }}>{lbl}</div>
+                    <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, fontWeight: 700, color: 'var(--gold)' }}>{val}</div>
+                    <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', marginTop: 2 }}>{lbl}</div>
                   </div>
                 ))}
               </div>
-            </div>
 
-            {/* Right: lead form */}
-            <div className="hero-card animate-in delay-2" style={{
-              background: 'rgba(255,255,255,0.05)',
-              border: '1px solid rgba(201,168,76,0.28)',
-              borderRadius: 6, padding: '28px 22px',
-              backdropFilter: 'blur(12px)',
-              boxShadow: '0 12px 40px rgba(0,0,0,0.35)',
-            }}>
-              <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 19, fontWeight: 700, color: 'var(--white)', marginBottom: 4 }}>
-                Start your free case review
-              </div>
-              <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', marginBottom: 20 }}>
-                Confidential · No obligation · Responds same day
-              </div>
-
-              {sent ? (
-                <div style={{
-                  background: 'rgba(201,168,76,0.12)', border: '1px solid var(--gold)',
-                  borderRadius: 4, padding: '28px 16px', textAlign: 'center',
-                }}>
-                  <div style={{ fontSize: 32, color: 'var(--gold)', marginBottom: 10 }}>✓</div>
-                  <strong style={{ fontFamily: 'Playfair Display, serif', color: 'var(--white)' }}>Message received.</strong>
-                  <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', marginTop: 8 }}>
-                    Tim will be in touch within a few hours.
-                  </p>
+              {/* Lead form card */}
+              <div className="hero-card animate-in delay-2" style={{
+                background: 'rgba(255,255,255,0.05)',
+                border: '1px solid rgba(201,168,76,0.28)',
+                borderRadius: 6, padding: '24px 20px',
+                backdropFilter: 'blur(12px)',
+                boxShadow: '0 12px 40px rgba(0,0,0,0.35)',
+              }}>
+                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 17, fontWeight: 700, color: 'var(--white)', marginBottom: 4 }}>
+                  Start your free case review
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                  <input type="text"  name="name"    placeholder="Your Name"    required
-                    className="input-field-dark"
-                    value={form.name}    onChange={e => setForm({ ...form, name: e.target.value })} />
-                  <input type="tel"   name="phone"   placeholder="Phone Number" required
-                    className="input-field-dark"
-                    value={form.phone}   onChange={e => setForm({ ...form, phone: e.target.value })} />
-                  <select name="charge" required className="input-field-dark"
-                    value={form.charge} onChange={e => setForm({ ...form, charge: e.target.value })}
-                    style={{ color: form.charge ? 'var(--white)' : 'rgba(255,255,255,0.38)' }}>
-                    <option value="" disabled>Type of Charge</option>
-                    {['DUI','Drug Offense','Domestic Violence','Assault','Theft / Property','Traffic','Other'].map(o => (
-                      <option key={o} value={o}>{o}</option>
-                    ))}
-                  </select>
-                  <textarea name="message" placeholder="Brief description (optional)" rows={3}
-                    className="input-field-dark" style={{ resize: 'vertical' }}
-                    value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} />
-                  <button type="submit" disabled={submitting} className="cta-gold"
-                    style={{ width: '100%', fontSize: 15, padding: '13px', textTransform: 'none' }}>
-                    {submitting ? 'Sending…' : 'Send My Case Details →'}
-                  </button>
-                  <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', textAlign: 'center' }}>
-                    100% confidential. No attorney-client relationship created.
+                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)', marginBottom: 16 }}>
+                  Confidential · No obligation · Responds same day
+                </div>
+
+                {sent ? (
+                  <div style={{
+                    background: 'rgba(201,168,76,0.12)', border: '1px solid var(--gold)',
+                    borderRadius: 4, padding: '24px 16px', textAlign: 'center',
+                  }}>
+                    <div style={{ fontSize: 28, color: 'var(--gold)', marginBottom: 8 }}>✓</div>
+                    <strong style={{ fontFamily: 'Playfair Display, serif', color: 'var(--white)' }}>Message received.</strong>
+                    <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', marginTop: 8 }}>
+                      Tim will be in touch within a few hours.
+                    </p>
                   </div>
-                  <div style={{ textAlign: 'center', marginTop: 10 }}>
-                    <a href="tel:4804474837" style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)' }}>
-                      Prefer to call? <span style={{ color: 'var(--gold)', fontWeight: 600 }}>(480) 447-4837</span>
-                    </a>
-                  </div>
-                </form>
-              )}
+                ) : (
+                  <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
+                    <input type="text"  name="name"    placeholder="Your Name"    required
+                      className="input-field-dark"
+                      value={form.name}    onChange={e => setForm({ ...form, name: e.target.value })} />
+                    <input type="tel"   name="phone"   placeholder="Phone Number" required
+                      className="input-field-dark"
+                      value={form.phone}   onChange={e => setForm({ ...form, phone: e.target.value })} />
+                    <select name="charge" required className="input-field-dark"
+                      value={form.charge} onChange={e => setForm({ ...form, charge: e.target.value })}
+                      style={{ color: form.charge ? 'var(--white)' : 'rgba(255,255,255,0.38)' }}>
+                      <option value="" disabled>Type of Charge</option>
+                      {['DUI','Drug Offense','Domestic Violence','Assault','Theft / Property','Traffic','Other'].map(o => (
+                        <option key={o} value={o}>{o}</option>
+                      ))}
+                    </select>
+                    <textarea name="message" placeholder="Brief description (optional)" rows={3}
+                      className="input-field-dark" style={{ resize: 'vertical' }}
+                      value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} />
+                    <button type="submit" disabled={submitting} className="cta-gold"
+                      style={{ width: '100%', fontSize: 14, padding: '12px', textTransform: 'none' }}>
+                      {submitting ? 'Sending…' : 'Send My Case Details →'}
+                    </button>
+                    <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', textAlign: 'center' }}>
+                      100% confidential. No attorney-client relationship created.
+                    </div>
+                    <div style={{ textAlign: 'center', marginTop: 8 }}>
+                      <a href="tel:4804474837" style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)' }}>
+                        Prefer to call? <span style={{ color: 'var(--gold)', fontWeight: 600 }}>(480) 447-4837</span>
+                      </a>
+                    </div>
+                  </form>
+                )}
+              </div>
             </div>
           </div>
         </div>

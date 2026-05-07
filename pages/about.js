@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
-import { IconScale } from '../components/Icons';
 
 export default function About() {
   return (
@@ -69,17 +68,23 @@ export default function About() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
 
             {/* Headshot */}
-            <div style={{ borderRadius: 5, overflow: 'hidden', boxShadow: 'var(--shadow-lg)', border: '2px solid #c9a84c' }}>
+            <div>
               <img
-                src="/tim-tobin.jpg"
+                src="/tim-about.jpg"
                 alt="Timothy Tobin, Criminal Defense Attorney"
-                style={{ width: '100%', maxWidth: 420, display: 'block' }}
+                style={{
+                  width: '100%', maxWidth: 380, display: 'block',
+                  borderRadius: 4, border: '2px solid #c9a84c',
+                  marginBottom: 16, boxShadow: 'var(--shadow-lg)',
+                }}
               />
-              <div style={{ background: 'var(--navy)', padding: '14px 16px', textAlign: 'center' }}>
-                <span style={{ fontSize: 13, color: '#c9a84c', fontFamily: 'Source Sans 3, sans-serif', fontWeight: 600 }}>
-                  Timothy Tobin · Criminal Defense Attorney
-                </span>
-              </div>
+              <p style={{
+                fontSize: 12, color: '#c9a84c', textAlign: 'center',
+                letterSpacing: '0.06em', textTransform: 'uppercase',
+                fontFamily: 'Source Sans 3, sans-serif', fontWeight: 600,
+              }}>
+                Timothy Tobin · Criminal Defense Attorney
+              </p>
             </div>
 
             {/* Attorney details card */}

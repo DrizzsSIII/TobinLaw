@@ -38,6 +38,9 @@ export default function Contact() {
       <Head>
         <title>Contact | Tobin Law Office</title>
         <meta name="description" content="Free, confidential criminal defense consultation. Call (480) 447-4837 or send a message. Serving Chandler, Mesa, Gilbert, Tempe, and Scottsdale." />
+        <meta property="og:title" content="Contact Tobin Law Office — Free Consultation" />
+        <meta property="og:description" content="Free, confidential criminal defense consultation. Call (480) 447-4837 or send a message. Serving Chandler, Mesa, Gilbert, Tempe, and Scottsdale." />
+        <meta property="og:url" content="https://tobinlawoffice.com/contact" />
       </Head>
 
       <Nav />

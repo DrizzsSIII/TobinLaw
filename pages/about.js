@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
+import { IconScale } from '../components/Icons';
 
 export default function About() {
   return (
@@ -9,6 +10,9 @@ export default function About() {
       <Head>
         <title>About Attorney Tim Tobin | Tobin Law Office</title>
         <meta name="description" content="Timothy Tobin is a former Arizona prosecutor now defending clients across Maricopa County. Former DUI and felony drug prosecutor. Flat rates, direct access, 5-star rated." />
+        <meta property="og:title" content="About Attorney Tim Tobin | Tobin Law Office" />
+        <meta property="og:description" content="Former Arizona prosecutor now defending clients across Maricopa County. Flat rates, direct access, 5-star rated criminal defense attorney." />
+        <meta property="og:url" content="https://tobinlawoffice.com/about" />
       </Head>
 
       <Nav />
@@ -64,20 +68,17 @@ export default function About() {
           {/* Sidebar */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
 
-            {/* Photo placeholder */}
-            <div style={{ position: 'relative', borderRadius: 5, overflow: 'hidden', boxShadow: 'var(--shadow-lg)' }}>
+            {/* Headshot */}
+            <div style={{ borderRadius: 5, overflow: 'hidden', boxShadow: 'var(--shadow-lg)', border: '2px solid #c9a84c' }}>
               <img
-                src="https://placehold.co/400x480/0f1f3d/c9a84c?text=Attorney+Photo"
+                src="/tim-tobin.jpg"
                 alt="Timothy Tobin, Criminal Defense Attorney"
-                style={{ width: '100%', display: 'block' }}
+                style={{ width: '100%', maxWidth: 420, display: 'block' }}
               />
-              <div style={{
-                position: 'absolute', bottom: 0, left: 0, right: 0,
-                background: 'linear-gradient(to top, rgba(10,22,40,0.94) 0%, transparent 100%)',
-                padding: '28px 20px 20px',
-              }}>
-                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, color: 'var(--white)', fontWeight: 700 }}>Timothy Tobin</div>
-                <div style={{ fontSize: 11, color: 'var(--gold)', marginTop: 3, fontFamily: 'Source Sans 3, sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', fontWeight: 600 }}>Criminal Defense Attorney</div>
+              <div style={{ background: 'var(--navy)', padding: '14px 16px', textAlign: 'center' }}>
+                <span style={{ fontSize: 13, color: '#c9a84c', fontFamily: 'Source Sans 3, sans-serif', fontWeight: 600 }}>
+                  Timothy Tobin · Criminal Defense Attorney
+                </span>
               </div>
             </div>
 

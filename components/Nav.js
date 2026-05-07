@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 
 const LINKS = [
   ['Practice Areas', '/practice-areas'],
+  ['Case Review',    '/case-review'],
   ['About Tim Tobin', '/about'],
   ['Contact',         '/contact'],
 ];

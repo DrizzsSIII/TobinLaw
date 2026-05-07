@@ -2,10 +2,14 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
+import {
+  IconCar, IconBeaker, IconHome, IconScale,
+  IconLock, IconExclamationTriangle,
+} from '../components/Icons';
 
 const AREAS = [
   {
-    icon: '🚗', title: 'DUI Defense', id: 'dui',
+    icon: '🚗', Icon: IconCar, title: 'DUI Defense', id: 'dui',
     tagline: 'Former DUI Prosecutor. Knows Every Angle.',
     desc: [
       "Arizona has some of the harshest DUI laws in the country. A DUI conviction — even a first offense — can mean jail time, steep fines, license suspension, and a permanent criminal record that follows you for life.",
@@ -14,7 +18,7 @@ const AREAS = [
     bullets: ['Simple DUI (BAC 0.08%+)', 'Extreme DUI (BAC 0.15–0.20%)', 'Super Extreme DUI (BAC 0.20%+)', 'Underage DUI (zero tolerance)', 'Drugged / prescription DUI', 'Admin Per Se license suspension'],
   },
   {
-    icon: '💊', title: 'Drug Crimes', id: 'drug-crimes',
+    icon: '💊', Icon: IconBeaker, title: 'Drug Crimes', id: 'drug-crimes',
     tagline: 'Former Felony Drug Prosecutor on Your Side.',
     desc: [
       "Arizona treats drug offenses seriously. Even possession for personal use can be charged as a felony, with sentences ranging from probation to years in prison — and a permanent record that affects employment, housing, and more.",
@@ -23,7 +27,7 @@ const AREAS = [
     bullets: ['Felony drug possession', 'Possession with intent to distribute', 'Drug trafficking', 'Drug paraphernalia charges', 'Prescription fraud', 'Marijuana offenses'],
   },
   {
-    icon: '🏠', title: 'Domestic Violence', id: 'domestic-violence',
+    icon: '🏠', Icon: IconHome, title: 'Domestic Violence', id: 'domestic-violence',
     tagline: 'Protecting Your Rights, Record, and Future.',
     desc: [
       "Domestic violence charges carry lasting consequences beyond the criminal conviction — gun rights, child custody, employment, and background checks can all be affected, sometimes permanently.",
@@ -32,7 +36,7 @@ const AREAS = [
     bullets: ['Assault in a domestic relationship', 'Threatening or intimidating', 'Aggravated domestic violence', 'Criminal damage / trespass', 'Domestic violence diversion program'],
   },
   {
-    icon: '⚖️', title: 'Assault & Violent Crimes', id: 'assault',
+    icon: '⚖️', Icon: IconScale, title: 'Assault & Violent Crimes', id: 'assault',
     tagline: 'Your Rights, Reputation, and Freedom on the Line.',
     desc: [
       "Assault charges range from misdemeanors to serious felonies depending on the circumstances, the alleged victim, and whether a weapon was involved. A conviction can affect every aspect of your life.",
@@ -41,7 +45,7 @@ const AREAS = [
     bullets: ['Simple assault (Class 1 misdemeanor)', 'Aggravated assault (felony)', 'Bar fight and altercation defense', 'Self-defense and justification claims', 'Threatening or intimidating charges'],
   },
   {
-    icon: '🔒', title: 'Property & Theft Crimes', id: 'theft',
+    icon: '🔒', Icon: IconLock, title: 'Property & Theft Crimes', id: 'theft',
     tagline: 'Charges Reduced or Dismissed.',
     desc: [
       "From shoplifting to burglary, property crimes are prosecuted aggressively in Arizona. Many clients are surprised to learn that charges they consider minor can result in felony convictions.",
@@ -50,7 +54,7 @@ const AREAS = [
     bullets: ['Shoplifting', 'Theft (all levels)', 'Burglary', 'Criminal damage / vandalism', 'Robbery'],
   },
   {
-    icon: '🚦', title: 'Traffic Violations', id: 'traffic',
+    icon: '🚦', Icon: IconExclamationTriangle, title: 'Traffic Violations', id: 'traffic',
     tagline: "Don't Let a Ticket Become a Criminal Record.",
     desc: [
       "Many traffic violations in Arizona are criminal charges — not just civil tickets. Even a seemingly minor offense like criminal speeding can result in a permanent criminal record, license suspension, and points that raise your insurance rates.",
@@ -66,6 +70,9 @@ export default function PracticeAreas() {
       <Head>
         <title>Practice Areas | Tobin Law Office</title>
         <meta name="description" content="DUI, drug crimes, domestic violence, assault, theft, and traffic defense in Chandler and Mesa, Arizona. Former prosecutor. Flat rates." />
+        <meta property="og:title" content="Practice Areas | Tobin Law Office" />
+        <meta property="og:description" content="DUI, drug crimes, domestic violence, assault, theft, and traffic defense in Chandler and Mesa, Arizona. Former prosecutor. Flat rates." />
+        <meta property="og:url" content="https://tobinlawoffice.com/practice-areas" />
       </Head>
 
       <Nav />
@@ -95,17 +102,18 @@ export default function PracticeAreas() {
       {/* Quick-jump pill nav */}
       <div style={{ background: 'var(--off-white)', borderBottom: '1px solid var(--gray-light)', padding: '14px 24px', overflowX: 'auto' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-          {AREAS.map(({ icon, title, id }) => (
+          {AREAS.map(({ Icon, title, id }) => (
             <a key={id} href={`#${id}`} style={{
               fontFamily: 'Source Sans 3, sans-serif', fontSize: 13, fontWeight: 600,
               color: 'var(--navy)', background: 'var(--white)',
               border: '1px solid var(--gray-light)', borderRadius: 20,
               padding: '6px 14px', whiteSpace: 'nowrap',
+              display: 'inline-flex', alignItems: 'center', gap: 6,
               transition: 'border-color 0.15s, color 0.15s',
             }}
             onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--gold)'; e.currentTarget.style.color = 'var(--gold)'; }}
             onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--gray-light)'; e.currentTarget.style.color = 'var(--navy)'; }}
-            >{icon} {title}</a>
+            ><Icon width={16} height={16} /> {title}</a>
           ))}
         </div>
       </div>
@@ -113,7 +121,7 @@ export default function PracticeAreas() {
       {/* Practice area sections */}
       <section style={{ padding: '64px 24px', background: 'var(--white)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          {AREAS.map(({ icon, title, id, tagline, desc, bullets }, i) => (
+          {AREAS.map(({ Icon, title, id, tagline, desc, bullets }, i) => (
             <div key={id} id={id} className="area-row" style={{
               display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48,
               padding: '52px 0',
@@ -123,7 +131,7 @@ export default function PracticeAreas() {
               {/* Description */}
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 18 }}>
-                  <span style={{ fontSize: 36 }}>{icon}</span>
+                  <span style={{ color: 'var(--navy)', flexShrink: 0 }}><Icon width={36} height={36} /></span>
                   <div>
                     <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 26, color: 'var(--navy)', lineHeight: 1.15 }}>{title}</h2>
                     <div style={{ fontSize: 13, color: 'var(--gold)', fontWeight: 600, marginTop: 4, fontFamily: 'Source Sans 3, sans-serif' }}>{tagline}</div>

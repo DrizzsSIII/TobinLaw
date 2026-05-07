@@ -3,6 +3,11 @@ import Link from 'next/link';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import { useState } from 'react';
+import {
+  IconCar, IconBeaker, IconHome, IconScale,
+  IconLock, IconExclamationTriangle, IconChat,
+  IconCurrencyDollar, IconClock,
+} from '../components/Icons';
 
 const REVIEWS = [
   {
@@ -24,38 +29,50 @@ const REVIEWS = [
 ];
 
 const PRACTICE_AREAS = [
-  { icon: '🚗', title: 'DUI Defense',             href: '/practice-areas#dui',              desc: "Simple, extreme, super extreme, and underage DUI. Former DUI prosecutor who knows every angle of the state's case." },
-  { icon: '💊', title: 'Drug Crimes',              href: '/practice-areas#drug-crimes',      desc: 'Possession, trafficking, and sale of controlled substances. Felony drug defense from a former Maricopa County drug prosecutor.' },
-  { icon: '🏠', title: 'Domestic Violence',        href: '/practice-areas#domestic-violence',desc: 'Experienced defense in Chandler, Mesa, and Maricopa County courts. Diversion programs and charge dismissals pursued aggressively.' },
-  { icon: '⚖️', title: 'Assault & Violent Crimes', href: '/practice-areas#assault',          desc: 'From misdemeanor assault to aggravated felony charges. Every case gets a customized defense strategy.' },
-  { icon: '🔒', title: 'Property & Theft',         href: '/practice-areas#theft',            desc: 'Shoplifting, burglary, and theft charges. Charges can often be reduced or dismissed with the right representation.' },
-  { icon: '🚦', title: 'Traffic Violations',       href: '/practice-areas#traffic',          desc: 'Even a traffic charge can leave a permanent criminal record. We protect your record, license, and future.' },
+  { Icon: IconCar,                title: 'DUI Defense',             href: '/practice-areas#dui',              desc: "Simple, extreme, super extreme, and underage DUI. Former DUI prosecutor who knows every angle of the state's case." },
+  { Icon: IconBeaker,             title: 'Drug Crimes',              href: '/practice-areas#drug-crimes',      desc: 'Possession, trafficking, and sale of controlled substances. Felony drug defense from a former Maricopa County drug prosecutor.' },
+  { Icon: IconHome,               title: 'Domestic Violence',        href: '/practice-areas#domestic-violence',desc: 'Experienced defense in Chandler, Mesa, and Maricopa County courts. Diversion programs and charge dismissals pursued aggressively.' },
+  { Icon: IconScale,              title: 'Assault & Violent Crimes', href: '/practice-areas#assault',          desc: 'From misdemeanor assault to aggravated felony charges. Every case gets a customized defense strategy.' },
+  { Icon: IconLock,               title: 'Property & Theft',         href: '/practice-areas#theft',            desc: 'Shoplifting, burglary, and theft charges. Charges can often be reduced or dismissed with the right representation.' },
+  { Icon: IconExclamationTriangle,title: 'Traffic Violations',       href: '/practice-areas#traffic',          desc: 'Even a traffic charge can leave a permanent criminal record. We protect your record, license, and future.' },
+];
+
+const WHY_CARDS = [
+  { Icon: IconScale,          title: 'Former Prosecutor Advantage', desc: "Timothy Tobin prosecuted for two government agencies, including Maricopa County. He knows exactly how prosecutors build their cases — and precisely how to dismantle them." },
+  { Icon: IconChat,           title: 'Direct Access to Your Attorney', desc: "No secretaries. No paralegals. Every client has Tim's direct cell phone and email. When you have a question, Tim answers — not a legal assistant." },
+  { Icon: IconCurrencyDollar, title: 'Flat Rate — No Surprises', desc: "Affordable flat-rate representation with payment plans available. You know the full cost upfront. No hourly billing, no hidden fees, no matter how long your case takes." },
+  { Icon: IconClock,          title: 'Available 6am to 8pm', desc: "Arrests don't happen on a 9–5 schedule. Tobin Law Office is reachable with extended hours, seven days a week, and responds to after-hours messages." },
+];
+
+const CASE_RESULTS = [
+  { charge: 'DUI',               outcome: 'Charges Dismissed',             detail: 'Breathalyzer challenged; state dropped all counts. Client kept license and record clean.' },
+  { charge: 'Drug Trafficking',  outcome: 'Reduced to Simple Possession',  detail: 'Mandatory prison sentence avoided. Client received probation with no jail time.' },
+  { charge: 'Domestic Violence', outcome: 'Case Dismissed',                detail: 'Diversion program completed successfully. All charges dropped; record remains clean.' },
+  { charge: 'Aggravated Assault',outcome: 'Acquitted at Trial',            detail: 'Self-defense claim upheld by jury. Not guilty on all felony counts.' },
+  { charge: 'Felony Shoplifting', outcome: 'Reduced to Misdemeanor',       detail: 'Felony conviction avoided. Client maintained employment and housing eligibility.' },
+  { charge: 'Criminal Speeding', outcome: 'Charges Dismissed',             detail: 'Record preserved, license protected. No points, no criminal history entry.' },
 ];
 
 const FAQS = [
   {
-    q: 'Do I really need a criminal defense attorney?',
-    a: "Yes. Even for a first offense or misdemeanor, criminal charges can result in jail time, fines, license suspension, and a permanent record that affects employment, housing, and more. An experienced attorney — especially a former prosecutor like Tim Tobin — knows how to challenge evidence, negotiate with the state, and pursue dismissals or reduced charges.",
+    q: 'What are the penalties for a first DUI in Arizona?',
+    a: "Arizona has some of the harshest DUI laws in the nation. A first-offense DUI (BAC 0.08%+) carries a mandatory minimum of 10 consecutive days in jail (though 9 can be suspended with treatment), fines exceeding $1,500, a 90-day license suspension, and required ignition interlock installation. Extreme DUI (BAC 0.15%+) and Super Extreme (BAC 0.20%+) carry even harsher mandatory minimums. The good news: these charges can often be challenged and reduced with the right attorney.",
   },
   {
-    q: 'How much does a criminal defense attorney cost?',
-    a: "Tobin Law Office charges flat rates — meaning you know the full cost of your representation upfront, with no hourly billing and no surprise invoices. Payment plans are available. The specific rate depends on the charge and complexity of your case. Call for a free consultation to get a quote with no obligation.",
+    q: 'Can drug possession charges be reduced or dismissed in Arizona?',
+    a: "Yes — often. Arizona offers several pathways including Proposition 200 (which mandates probation over prison for first and second personal-use possessions), drug diversion programs, and TASC (Treatment Assessment Screening Center) programs that can result in full dismissal upon completion. An aggressive defense can also challenge the legality of the search and seizure that led to the arrest, which can result in evidence suppression and case dismissal.",
   },
   {
-    q: 'What does "former prosecutor" mean for my case?',
-    a: "It means Tim Tobin spent years on the other side of the courtroom, investigating and building criminal cases for the government — including Maricopa County. He knows exactly how prosecutors think, what evidence they rely on, and where the weaknesses are in their cases. That insider knowledge is a direct advantage for your defense.",
+    q: 'What happens immediately after a domestic violence arrest in Arizona?',
+    a: "Arizona law requires a mandatory arrest when police are called to a domestic disturbance and find probable cause — even if the alleged victim doesn't want to press charges. After arrest, you'll appear before a judge for an Initial Appearance within 24 hours. A protective order is typically issued, which can prohibit you from returning to your home. You should contact an attorney before making any statements to police, and before attempting contact with the alleged victim — violations of a protective order carry additional criminal penalties.",
   },
   {
-    q: 'What happens at the first consultation?',
-    a: "Your first consultation is free, confidential, and with Tim directly — not a paralegal or intake assistant. Tim will listen to your situation, explain your rights and options, and give you an honest assessment of your case. There's no obligation and no pressure.",
+    q: 'Is criminal speeding a serious charge in Arizona?',
+    a: "Yes. Unlike a civil traffic ticket, criminal speeding in Arizona (A.R.S. § 28-701.02) is a Class 3 misdemeanor — a criminal charge that creates a permanent criminal record. It applies if you drive over 85 mph anywhere, over 35 mph in a school zone, or 20+ mph over the posted limit. A conviction carries up to 30 days in jail, fines, and 3 points on your license. Many people are surprised to learn a 'traffic ticket' is actually a criminal offense — and that it's worth fighting.",
   },
   {
-    q: 'Will my case go to trial?',
-    a: "Most criminal cases in Arizona are resolved before trial through negotiation, plea agreements, or dismissal. Tim Tobin prepares every case as if it will go to trial — which often produces better negotiating outcomes. If trial is the right path, Tim is fully prepared to fight for you in court.",
-  },
-  {
-    q: 'How quickly should I contact an attorney after an arrest?',
-    a: "Immediately. Evidence can disappear quickly after an arrest, and prosecutors begin building their case from day one. Early intervention — challenging the circumstances of your arrest, preserving evidence, and establishing a defense strategy — can significantly change the outcome.",
+    q: 'What is a criminal diversion program and do I qualify?',
+    a: "Diversion programs allow eligible defendants to avoid a criminal conviction entirely by completing requirements such as counseling, community service, education classes, or treatment. Upon successful completion, charges are dismissed. In Arizona, diversion is available for many first-time offenses including certain drug charges, domestic violence, minor assault, and some theft cases. Eligibility depends on the charge, your criminal history, and the specific court. Attorney Tobin has extensive experience negotiating diversion agreements and knows which courts and prosecutors are most receptive.",
   },
 ];
 
@@ -112,9 +129,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Tobin Law Office | Chandler & Mesa Criminal Defense Attorney</title>
+        <title>Tobin Law Office | Chandler &amp; Mesa Criminal Defense Attorney</title>
         <meta name="description" content="Arizona criminal defense attorney Timothy Tobin — DUI, drug crimes, domestic violence, assault. Former prosecutor. Flat rates. Free consultations." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Tobin Law Office | Chandler &amp; Mesa Criminal Defense Attorney" />
+        <meta property="og:description" content="Former Arizona prosecutor now defending the accused. DUI, drug crimes, domestic violence, assault. Flat rates. Free consultations across Maricopa County." />
+        <meta property="og:url" content="https://tobinlawoffice.com" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON_LD }} />
       </Head>
 
@@ -128,9 +148,7 @@ export default function Home() {
         position: 'relative',
         overflow: 'hidden',
       }}>
-        {/* Top gold rule */}
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: 'var(--gold)', zIndex: 2 }} />
-        {/* Radial glow */}
         <div style={{
           position: 'absolute', inset: 0, pointerEvents: 'none',
           backgroundImage: [
@@ -138,7 +156,6 @@ export default function Home() {
             'radial-gradient(ellipse 50% 60% at 10% 80%, rgba(15,31,61,0.6) 0%, transparent 70%)',
           ].join(', '),
         }} />
-        {/* Grain */}
         <div style={{ position: 'absolute', inset: 0, backgroundImage: grainBg, opacity: 0.032, pointerEvents: 'none' }} />
 
         <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
@@ -166,14 +183,13 @@ export default function Home() {
 
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 44 }}>
                 <a href="tel:4804474837" className="cta-gold" style={{ fontSize: 16, padding: '15px 34px', textTransform: 'none' }}>
-                  📞 Call (480) 447-4837
+                  Call (480) 447-4837
                 </a>
-                <Link href="/contact" className="cta-outline" style={{ fontSize: 15 }}>
+                <Link href="/case-review" className="cta-outline" style={{ fontSize: 15 }}>
                   Free Case Review
                 </Link>
               </div>
 
-              {/* Trust signals */}
               <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
                 {[
                   ['★ 5.0', '128 Google Reviews'],
@@ -198,7 +214,7 @@ export default function Home() {
               boxShadow: '0 12px 40px rgba(0,0,0,0.35)',
             }}>
               <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 19, fontWeight: 700, color: 'var(--white)', marginBottom: 4 }}>
-                Get a Free Case Review
+                Start your free case review
               </div>
               <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', marginBottom: 20 }}>
                 Confidential · No obligation · Responds same day
@@ -241,6 +257,11 @@ export default function Home() {
                   <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', textAlign: 'center' }}>
                     100% confidential. No attorney-client relationship created.
                   </div>
+                  <div style={{ textAlign: 'center', marginTop: 10 }}>
+                    <a href="tel:4804474837" style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)' }}>
+                      Prefer to call? <span style={{ color: 'var(--gold)', fontWeight: 600 }}>(480) 447-4837</span>
+                    </a>
+                  </div>
                 </form>
               )}
             </div>
@@ -280,18 +301,15 @@ export default function Home() {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
-            {[
-              { icon: '⚖️', title: 'Former Prosecutor Advantage', desc: "Timothy Tobin prosecuted for two government agencies, including Maricopa County. He knows exactly how prosecutors build their cases — and precisely how to dismantle them." },
-              { icon: '📱', title: 'Direct Access to Your Attorney', desc: "No secretaries. No paralegals. Every client has Tim's direct cell phone and email. When you have a question, Tim answers — not a legal assistant." },
-              { icon: '💲', title: 'Flat Rate — No Surprises', desc: "Affordable flat-rate representation with payment plans available. You know the full cost upfront. No hourly billing, no hidden fees, no matter how long your case takes." },
-              { icon: '🕕', title: 'Available 6am to 8pm', desc: "Arrests don't happen on a 9–5 schedule. Tobin Law Office is reachable with extended hours, seven days a week, and responds to after-hours messages." },
-            ].map(({ icon, title, desc }) => (
+            {WHY_CARDS.map(({ Icon, title, desc }) => (
               <div key={title} className="card-hover" style={{
                 background: 'var(--white)', border: '1px solid var(--gray-light)',
                 borderTop: '3px solid var(--gold)', padding: '30px 24px',
                 borderRadius: '0 0 5px 5px', boxShadow: 'var(--shadow-sm)',
               }}>
-                <div style={{ fontSize: 30, marginBottom: 14 }}>{icon}</div>
+                <div style={{ color: 'var(--navy)', marginBottom: 14 }}>
+                  <Icon width={28} height={28} />
+                </div>
                 <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, color: 'var(--navy)', marginBottom: 10 }}>{title}</h3>
                 <p style={{ fontSize: 14, lineHeight: 1.78, color: 'var(--text-body)' }}>{desc}</p>
               </div>
@@ -321,13 +339,15 @@ export default function Home() {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 16 }}>
-            {PRACTICE_AREAS.map(({ icon, title, desc, href }) => (
+            {PRACTICE_AREAS.map(({ Icon, title, desc, href }) => (
               <Link href={href} key={title} className="card-hover" style={{
                 display: 'block', background: 'var(--navy)',
                 padding: '26px 24px', borderRadius: 4,
                 borderLeft: '4px solid var(--gold)', boxShadow: 'var(--shadow-md)',
               }}>
-                <div style={{ fontSize: 26, marginBottom: 10 }}>{icon}</div>
+                <div style={{ color: 'var(--gold)', marginBottom: 10 }}>
+                  <Icon width={28} height={28} />
+                </div>
                 <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, color: 'var(--white)', marginBottom: 8 }}>{title}</h3>
                 <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.62)', lineHeight: 1.68, marginBottom: 14 }}>{desc}</p>
                 <span style={{ fontSize: 11, color: 'var(--gold)', fontWeight: 700, fontFamily: 'Source Sans 3, sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
@@ -377,6 +397,43 @@ export default function Home() {
               Read All 128 Reviews on Google →
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* ── CASE RESULTS ── */}
+      <section style={{ padding: '84px 24px', background: 'var(--navy-mid)' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: 52 }}>
+            <span className="section-label">Case Outcomes</span>
+            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--white)', marginTop: 8 }}>
+              Results That Speak for Themselves
+            </h2>
+            <div className="divider-gold" style={{ margin: '18px auto 0' }} />
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+            {CASE_RESULTS.map(({ charge, outcome, detail }) => (
+              <div key={charge} style={{
+                background: 'rgba(255,255,255,0.04)',
+                border: '1px solid rgba(201,168,76,0.15)',
+                borderLeft: '4px solid var(--gold)',
+                borderRadius: '0 4px 4px 0',
+                padding: '24px 20px',
+              }}>
+                <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.38)', marginBottom: 8 }}>
+                  {charge}
+                </div>
+                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, fontWeight: 700, color: 'var(--gold)', marginBottom: 10, lineHeight: 1.25 }}>
+                  {outcome}
+                </div>
+                <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)', lineHeight: 1.68 }}>{detail}</p>
+              </div>
+            ))}
+          </div>
+
+          <p style={{ textAlign: 'center', fontSize: 12, color: 'rgba(255,255,255,0.28)', marginTop: 28, fontStyle: 'italic' }}>
+            Prior results do not guarantee similar outcomes. Every case is different.
+          </p>
         </div>
       </section>
 

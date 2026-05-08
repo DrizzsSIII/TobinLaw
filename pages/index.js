@@ -131,7 +131,7 @@ export default function Home() {
       <Head>
         <title>Tobin Law Office | Chandler &amp; Mesa Criminal Defense Attorney</title>
         <meta name="description" content="Arizona criminal defense attorney Timothy Tobin — DUI, drug crimes, domestic violence, assault. Former prosecutor. Flat rates. Free consultations." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta property="og:title" content="Tobin Law Office | Chandler &amp; Mesa Criminal Defense Attorney" />
         <meta property="og:description" content="Former Arizona prosecutor now defending the accused. DUI, drug crimes, domestic violence, assault. Flat rates. Free consultations across Maricopa County." />
         <meta property="og:url" content="https://tobinlawoffice.com" />
